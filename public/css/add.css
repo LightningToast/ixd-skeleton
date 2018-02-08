@@ -1,0 +1,43 @@
+h1 {
+	text-align: center;
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .form-inline .form-control {
+    width: auto;
+    display: inline-block;
+    position: relative;
+  }
+  .form-inline label {
+    margin-right: 10px;
+  }
+  .form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .form-inline input {
+  	border:1px; 
+  	border-bottom-style: solid;
+  	border-top-style: none;
+  	border-left-style:none;
+  	border-right-style:none;
+  	position: relative;
+  }
+}
+
+.buttonHolder {
+	text-align: center;
+}
+
+.form-inline input {
+    border:1px; 
+    border-bottom-style: solid;
+    border-top-style: none;
+    border-left-style:none;
+    border-right-style:none;
+    position: relative;
+  }
