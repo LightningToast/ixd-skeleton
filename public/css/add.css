@@ -4,6 +4,20 @@ h1 {
 	margin-bottom: 20px;
   margin-top: 0px;
 }
+
+.form-inline label {
+    margin-right: 10px;
+  }
+
+.form-inline input {
+    border:1px; 
+    border-bottom-style: solid;
+    border-top-style: none;
+    border-left-style:none;
+    border-right-style:none;
+    position: relative;
+  }
+
 @media (max-width: 767px) {
   .form-inline .form-control {
     width: auto;
@@ -32,17 +46,15 @@ h1 {
 
 .buttonHolder {
 	text-align: center;
+  position: relative;
+  margin-top: 100%;
 }
-
-.form-inline input {
-    border:1px; 
-    border-bottom-style: solid;
-    border-top-style: none;
-    border-left-style:none;
-    border-right-style:none;
-    position: relative;
-  }
 
 .btn-back {
   margin-top: 10px;
+  background-color: #428bca;
+}
+
+a {
+  color: #ffffff;
 }
