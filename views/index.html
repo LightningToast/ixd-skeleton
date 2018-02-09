@@ -1,11 +1,47 @@
 <!DOCTYPE html>
+<html>
 <head>
-	<title>Index</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/introHCI.css" rel="stylesheet">
+
+	<div class="jumbotron">
+			<h1>Agenda</h1>
+	</div>
 </head>
 
+<body>
 	<h1>Home</h1>
 	<li><a href="profile.html">Profile</a></li>
 	<li><a href="schedule.html">Your Schedule</a></li>
 	<li><a href="task.html">Add Task</a></li>
 	<li><a href="help.html">Help</a></li>
 	<li><a href="signOut.html">Sign Out</a></li>
+	<div class="friend">
+		<img src="http://lorempixel.com/500/500/people" alt="Lorem Pixel image">
+		<a href"#" class="name">
+			<h3>Fake Friend</h3>
+		</a>
+		<p>All my friends are imaginary.</p>
+		<hr>
+	</div>
+
+	{{#each friends}}
+      		<div class="friend">
+         		<img src={{imageURL}} alt="Lorem Pixel image" class="img-responsive"/>
+         		<a href"#" class="name">
+       				<h3>{{name}}</h3>
+       			</a>
+       			<p>{{description}}</p>
+       			<hr>
+   			</div>
+    {{/each}}	
+    <script src="js/jquery-1.11.0.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/hci-friends.js"></script>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

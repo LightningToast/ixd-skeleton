@@ -1,0 +1,32 @@
+{
+	"friends": [
+		{
+			"title": "Lunch",
+			"description": "Lunch @ Price Center",
+			"timeStart": "11",
+			"timeEnd": "12",
+			"duration": "1"
+		},
+		{
+			"name": "COGS 120 Discussion",
+			"description": "Discussion @ Cognitive Science Building",
+			"timeStart": "12",
+			"timeEnd": "1",
+			"duration": "1"
+		},
+		{
+			"name": "Homework",
+			"description": "COGS 120 Homework",
+			"timeStart": "2",
+			"timeEnd": "4",
+			"duration": "2"
+		},
+		{
+			"name": "Laundry",
+			"description": "Wash your clothes",
+			"timeStart": "7",
+			"timeEnd": "8",
+			"duration": "1"
+		}
+	]
+}
