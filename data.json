@@ -8,21 +8,21 @@
 			"duration": "1"
 		},
 		{
-			"name": "COGS 120 Discussion",
+			"title": "COGS 120 Discussion",
 			"description": "Discussion @ Cognitive Science Building",
 			"timeStart": "12",
 			"timeEnd": "1",
 			"duration": "1"
 		},
 		{
-			"name": "Homework",
+			"title": "Homework",
 			"description": "COGS 120 Homework",
 			"timeStart": "2",
 			"timeEnd": "4",
 			"duration": "2"
 		},
 		{
-			"name": "Laundry",
+			"title": "Laundry",
 			"description": "Wash your clothes",
 			"timeStart": "7",
 			"timeEnd": "8",
