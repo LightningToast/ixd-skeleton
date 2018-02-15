@@ -11,7 +11,8 @@
 .task {
 	margin-left: 20px;
     background-color: #deebf7;
-    padding: 20px;
+    text-align: center;
+    padding: 2px;
     width: 300px;
 }
 h1, h2, h3, h4, h5 {

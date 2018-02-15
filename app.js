@@ -44,11 +44,11 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-app.get('/', help.view);
-app.get('/', profile.view);
-app.get('/', schedule.view);
-app.get('/', signOut.view);
-app.get('/', task.view);
+app.get('/help', help.view);
+app.get('/profile', profile.view);
+app.get('/schedule', schedule.view);
+app.get('/signOut', signOut.view);
+app.get('/task', task.view);
 // Example route
 // app.get('/users', user.list);
 
