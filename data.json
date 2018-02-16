@@ -2,7 +2,7 @@
 	"events": [
 		{
 			"title": "Lunch",
-			"description": "Lunch @ Price Center",
+			"description": "",
 			"timeStart": "12",
 			"timeEnd": "12:30",
 			"duration": "1",
