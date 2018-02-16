@@ -1,32 +1,44 @@
 {
-	"friends": [
+	"events": [
 		{
 			"title": "Lunch",
 			"description": "Lunch @ Price Center",
-			"timeStart": "11",
-			"timeEnd": "12",
-			"duration": "1"
+			"timeStart": "12",
+			"timeEnd": "12:30",
+			"duration": "1",
+			"class": "appointment",
+			"height": "40px",
+			"top": "60px"
 		},
 		{
 			"title": "COGS 120 Discussion",
 			"description": "Discussion @ Cognitive Science Building",
-			"timeStart": "12",
-			"timeEnd": "1",
-			"duration": "1"
+			"timeStart": "1",
+			"timeEnd": "2",
+			"duration": "1",
+			"class": "appointment",
+			"height": "80px",
+			"top": "140px"
 		},
 		{
 			"title": "Homework",
 			"description": "COGS 120 Homework",
 			"timeStart": "2",
 			"timeEnd": "4",
-			"duration": "2"
+			"duration": "2",
+			"class": "task",
+			"height": "160px",
+			"top": "220px"
 		},
 		{
 			"title": "Laundry",
 			"description": "Wash your clothes",
 			"timeStart": "7",
 			"timeEnd": "8",
-			"duration": "1"
+			"duration": "1",
+			"class": "task",
+			"height": "80px",
+			"top": "620px"
 		}
 	]
 }

@@ -9,12 +9,48 @@
 	color: #CC00AA;
 }
 .task {
-	margin-left: 20px;
-    background-color: #deebf7;
+	position: absolute;
+	right:0;
+	width: 90%;
+
+	/*height: 30%;*/
+	margin-left: auto;
+    background-color: #ef8b8b;
     text-align: center;
     padding: 2px;
-    width: 300px;
+    border: 2px solid #cc5555;
+    border-radius: 10px;
+}
+.appointment {
+	position: absolute;
+	right:0;
+	width: 90%;
+	/*height:100px;*/
+	/*height: 30%;*/
+	margin-left: auto;
+    background-color: #a8e88d;
+    text-align: center;
+    padding: 2px;
+    border: 2px solid #699b53;
+    border-radius: 10px;
+}
+.header {
+	text-align: center;
+	position: sticky;
+	height: 30%;
+	top: 0;
+	z-index: 10;
+	background-color: #ffffffff
+	border: 2px solid ##707070;
+}
+.timeMarker {
+	position: absolute;
+    left: 5px;
+}
+.subTimeMarker {
+	position: absolute;
+    color: #a3a3a3;
 }
 h1, h2, h3, h4, h5 {
-	color: #8382BF;
+	color: #353638;
 }

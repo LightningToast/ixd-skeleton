@@ -1,3 +1,6 @@
+<!--Handlebars.registerHelper( "testHelper", function( testVar )) {
+	return 'working!';
+}-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,37 +10,97 @@
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/introHCI.css" rel="stylesheet">
 
-	<div class="jumbotron">
-			<h1>Agenda</h1>
+	<div class="header">
+			
+		<h3>Today</h3>
 	</div>
 </head>
 
 <body>
+	<!--
 	<h1>Home</h1>
 	<li><a href="profile">Profile</a></li>
 	<li><a href="schedule">Your Schedule</a></li>
 	<li><a href="task">Add Task</a></li>
 	<li><a href="help">Help</a></li>
 	<li><a href="signOut">Sign Out</a></li>
-	
-	<div class="task">
-		<a href"#" class="title">
-			<h3>Fake Task</h3>
-		</a>
-		<p>Fake Description.</p>
-		<p>From 10-11</p>
-		<hr>
+	-->
+	<div class="timeMarker" style="top:60px">
+		12
+		<div class="subTimeMarker">
+				15
+				30
+				45
+		</div>
 	</div>
-	{{#each friends}}
-      		<div class="task">
+	<div class="timeMarker" style="top:140px">
+		1
+		<div class="subTimeMarker">
+				15
+				30
+				45
+		</div>
+	</div>
+	<div class="timeMarker" style="top:220px">
+		2
+		<div class="subTimeMarker">
+				15
+				30
+				45
+		</div>
+	</div>
+	<div class="timeMarker" style="top:300px">
+		3
+		<div class="subTimeMarker">
+				15
+				30
+				45
+		</div>
+	</div>
+	<div class="timeMarker" style="top:380px">
+		4
+		<div class="subTimeMarker">
+				15
+				30
+				45
+		</div>
+	</div>
+	<div class="timeMarker" style="top:460px">
+		5
+		<div class="subTimeMarker">
+				15
+				30
+				45
+		</div>
+	</div>
+	<div class="timeMarker" style="top:540px">
+		6
+		<div class="subTimeMarker">
+				15
+				30
+				45
+		</div>
+	</div>
+	<div class="timeMarker" style="top:620px">
+		7
+		<div class="subTimeMarker">
+				15
+				30
+				45
+		</div>
+	</div>
+	{{#each events}}
+      		<div class={{class}} style="height: {{height}}; top:{{top}}">
+
          		<a href"#" class="title">
-       				<h3>{{title}}</h3>
+       				<h4>{{title}}</h4>
        			</a>
        			<p>{{description}}</p>
-       			<p>From {{timeStart}} to {{timeEnd}}</p>
        			<hr>
    			</div>
+   			<hr>
     {{/each}}	
+
 	<script src="js/bootstrap.js"></script>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
