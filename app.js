@@ -49,6 +49,7 @@ app.get('/profile', profile.view);
 app.get('/schedule', schedule.view);
 app.get('/signOut', signOut.view);
 app.get('/task', task.view);
+app.post('/', index.setData);
 // Example route
 // app.get('/users', user.list);
 
