@@ -1,10 +1,10 @@
 {
-  "name": "IntroHCI",
+  "name": "ixd-skeleton",
   "version": "0.0.1",
   "author": "Intro HCI Staff",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LightningToast/ixd-skeleton"
+    "url": "git+https://github.com/LightningToast/ixd-skeleton.git"
   },
   "license": "MIT",
   "private": true,
@@ -19,5 +19,12 @@
   },
   "engines": {
     "node": "0.10.x"
-  }
+  },
+  "description": "repo ====",
+  "bugs": {
+    "url": "https://github.com/LightningToast/ixd-skeleton/issues"
+  },
+  "homepage": "https://github.com/LightningToast/ixd-skeleton#readme",
+  "main": "index.js",
+  "devDependencies": {}
 }
