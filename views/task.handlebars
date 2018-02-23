@@ -9,7 +9,7 @@
   <!-- Bootstrap -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="/js/jquery.timepicker.js"></script>
-  <link rel="stylesheet" type="text/css" href="/js/jquery.timepicker.css" />
+  <link rel="stylesheet" type="text/css" href="/css/jquery.timepicker.css" />
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/add.css" rel="stylesheet">
   <script src="/js/taskAdd.js"></script>
@@ -32,11 +32,11 @@
   <div class="form-group row">
     <label for="start" class="col-sm-2 col-form-label">Start</label>
     <div class="col-sm-10">
-      <input type="start" class="form-control" id="startForm">
+      <input type="start" class="form-control timepicker" id="startForm">
     </div>
     <script>
-      $(function() {
-        $('#basicExample').timepicker();
+     $(document).ready(function(){
+        $('input.timepicker').timepicker({});
       });
     </script>
   </div>
