@@ -17,3 +17,6 @@ function statusChangeCallback(response) {
          FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
   }
 }
+
+
+
