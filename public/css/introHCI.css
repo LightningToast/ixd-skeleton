@@ -46,10 +46,12 @@
 .timeMarker {
 	position: absolute;
     left: 5px;
+    width: 100%;
 }
 .subTimeMarker {
 	position: absolute;
     color: #a3a3a3;
+    width: 100%;
 }
 .loginPrompt {
 	text-align: center;
