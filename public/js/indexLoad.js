@@ -1,4 +1,5 @@
 'use strict';
+var rescheduleVal = "";
 $(document).ready(function() {
 	console.log("BEGIN Index");
 	if(sessionStorage.getItem('loggedIn') == 'true') {
@@ -10,23 +11,38 @@ $(document).ready(function() {
 })
 function initializePage() {
 	//console.log(document.getElementById("startForm").value);
+	$(".reschedulePrompt").hide();
+	$("#rescheduleBeginButton").click(function(e) {
+		$(".reschedulePrompt").hide();
+	});
+	$("#rescheduleConfirmButton").click(function(e) {
+		console.log(rescheduleVal);
+		$.post("/", {"modifyTask": true,
+					"rescheduleTask": true,
+					"taskName":rescheduleVal}, rescheduleTask);
+	});
 	$("#loginButton").click(function(e) {
 		console.log("Log in clicked!");
 		sessionStorage.setItem('loggedIn', 'true');
 	});
 	$(".appointment").click(function(e) {
 		console.log("appointment clicked");
-		$.post("/", {"modifyTask": true,
+		$(".reschedulePrompt").show();
+		rescheduleVal = e.target.id;
+				/*$.post("/", {"modifyTask": true,
 					"rescheduleTask": true,
 					"taskName":e.target.id}, rescheduleTask);
-		
+		*/
 	});
 	$(".task").click(function(e) {
 		console.log("task clicked");
+		$(".reschedulePrompt").show();
+		rescheduleVal = e.target.id;
+		/*
 		$.post("/", {"modifyTask": true,
 					"rescheduleTask": true,
 					"taskName":e.target.id}, rescheduleTask);
-		
+		*/
 	});
 
 }

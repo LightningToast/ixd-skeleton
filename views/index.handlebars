@@ -56,9 +56,23 @@
 		</h3>
 		<button id="loginButton" type="button" class="btn btn-default btn-sm btn-back">
       
-      <a href="signOut">Log In!</a>
+      		<a href="signOut">Log In!</a>
     
-  </button>
+  		</button>
+	</div>
+	<div id="reschedulePopup" class="reschedulePrompt">
+		<h3>
+			Time to start!
+		</h3>
+		<button id="rescheduleBeginButton" type="button" class="btn btn-default btn-sm btn-back">
+      	<h2>
+      		Starting!
+		</h2>
+		<button id="rescheduleConfirmButton" type="button" class="btn btn-default btn-sm btn-back">
+      	<h2>
+      		Reschedule
+		</h2>       
+  		</button>
 	</div>
 	{{#each times}}
 		<div id="{{hour}}" class="timeMarker" style="top:{{topHour}}" ondrop="drop(event)" ondragover="allowDrop(event)">

@@ -64,6 +64,17 @@
 	background-color: #efc35d;
 	border: 2px solid #e29f31;
 }
+.reschedulePrompt {
+	text-align: center;
+	position: fixed;
+	right: 5%;
+	top: 35%;
+	z-index: 11;
+    width: 90%;
+    height: 30%;
+	background-color: #efc35d;
+	border: 2px solid #e29f31;
+}
 h1, h2, h3, h4, h5 {
 	color: #353638;
 }
