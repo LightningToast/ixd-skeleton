@@ -14,6 +14,20 @@ function initializePage() {
 		console.log("Log in clicked!");
 		sessionStorage.setItem('loggedIn', 'true');
 	});
+	$(".appointment").click(function(e) {
+		console.log("appointment clicked");
+		$.post("/", {"modifyTask": true,
+					"rescheduleTask": true,
+					"taskName":e.target.id}, rescheduleTask);
+		
+	});
+	$(".task").click(function(e) {
+		console.log("task clicked");
+		$.post("/", {"modifyTask": true,
+					"rescheduleTask": true,
+					"taskName":e.target.id}, rescheduleTask);
+		
+	});
 
 }
 function projectClick(e) { 
@@ -38,6 +52,12 @@ function changeTime(ev) {
 }
 function modifyTask(result) {
 	//console.log(result);
+}
+function rescheduleTask(result) {
+	console.log("reschedule Task Complete");
+	console.log(result);
+	location.reload();
+	
 }
 
 

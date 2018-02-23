@@ -26,25 +26,72 @@ exports.setData = function (req, res) {
 			"title":req.body.title,
 			"description":req.body.description,
 			"timeStart":req.body.timeStart,
-			"timeEnd":req.body.timeEnd,
+			"timeEnd":req.body.timeStart+req.body.duration,
 			"duration":req.body.duration,
 			"class":req.body.class,
 			"height":height+"px",
 			"top":top+"px"
 		});
 	} else {
-		console.log(req.body.taskName);
-		for(event in data.events) {
+		if(req.body.rescheduleTask != 'true') {
+			console.log(req.body.taskName);
+			for(event in data.events) {
+				
+				if(data.events[event].title == req.body.taskName) {
+					console.log(data.events[event]);
+					data.events[event].timeStart = req.body.taskTime;
+					data.events[event].timeEnd = req.body.taskTime + data.events[event].duration;
+					data.events[event].top = req.body.taskTop;
+					console.log(data.events[event]);
+				}
+			}
+		} else {
+			console.log("rescheduleTask");
+			console.log(req.body.taskName);
+			var dataPos = -1;
+			for(event in data.events) {
+				
+				if(data.events[event].title == req.body.taskName) {
+					dataPos = event;
+				}
+			}
+			if(dataPos != -1) {
+				for(var count = parseFloat(data.events[dataPos].timeEnd); count < 12; count += 0.25) {
+					var start = count;
+					var end = count + parseFloat(data.events[dataPos].duration);
+					if(checkTime(dataPos, start,end)) {
+						data.events[dataPos].timeStart = start;
+						data.events[dataPos].timeEnd = end;
+						data.events[dataPos].top = 60 + (start * 80) + "px";
+
+						break;
+					}
+				}
+				console.log(data.events[dataPos]);
+
+			}
 			
-			if(data.events[event].title == req.body.taskName) {
-				console.log(data.events[event]);
-				data.events[event].timeStart = req.body.taskTime;
-				data.events[event].top = req.body.taskTop;
-				console.log(data.events[event]);
+			
+		}	
+	}
+	res.render('index', data);
+}
+function checkTime(pos, start, end) {
+	var valid = true;
+	for(event in data.events) {
+				
+		if(event != pos) {
+			if((end > data.events[event].timeStart)&&(end < data.events[event].timeEnd)) {
+				valid = false;
+			}else if((start > data.events[event].timeStart)&&(start < data.events[event].timeEnd)) {
+				valid = false;
+			}else if((start <= data.events[event].timeStart)&&(end >= data.events[event].timeEnd)) {
+				valid = false;
 			}
 		}
 	}
-	res.render('index', data);
+
+	return valid;
 }
 
 

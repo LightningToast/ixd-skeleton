@@ -97,15 +97,15 @@
 		{
 			"title": "Lunch",
 			"description": "",
-			"timeStart": "12",
-			"timeEnd": "12:30",
+			"timeStart": "0",
+			"timeEnd": "1",
 			"duration": "1",
 			"class": "appointment",
 			"height": "40px",
 			"top": "60px"
 		},
 		{
-			"title": "COGS 120 Discussion",
+			"title": "Studio",
 			"description": "Discussion @ Cognitive Science Building",
 			"timeStart": "1",
 			"timeEnd": "2",
