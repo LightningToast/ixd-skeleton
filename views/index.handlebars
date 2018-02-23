@@ -1,9 +1,7 @@
-<!--Handlebars.registerHelper( "testHelper", function( testVar )) {
-	return 'working!';
-}-->
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -11,6 +9,32 @@
 	<link href="/css/introHCI.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/indexLoad.js"></script>
+	<style>
+	#div1 {
+	    width: 350px;
+	    height: 70px;
+	    padding: 10px;
+	    border: 1px solid #aaaaaa;
+	}
+	</style>
+	<script>
+	function allowDrop(ev) {
+    	ev.preventDefault();
+	}
+
+	function drag(ev) {
+    	ev.dataTransfer.setData("text", ev.target.id);
+	}
+
+	function drop(ev) {
+    	ev.preventDefault();
+    	var data = ev.dataTransfer.getData("text");
+    	console.log(ev.target);
+    	document.getElementById(data).style.top = ev.target.style.top;
+    	//ev.target.appendChild(document.getElementById(data));
+	}
+	</script>
+
 	<div class="header">
 		<h3>Today</h3>
 		<button type="button" class="btn btn-default btn-sm btn-back" style="position: absolute; left:10px; top:0;">
@@ -23,14 +47,6 @@
 </head>
 
 <body>
-	<!--
-	<h1>Home</h1>
-	<li><a href="schedule">Your Schedule</a></li>
-	<li><a href="help">Help</a></li>
-	<li><a href="signOut">Sign Out</a></li>
-	<li><a href="profile">Profile</a></li>
-	<li><a href="task">Add Task</a></li>
-	-->
 	<div class="loginPrompt">
 		<h3>
 			What good is a calendar you keep losing?
@@ -41,73 +57,22 @@
     
   </button>
 	</div>
-	
-	<div class="timeMarker" style="top:60px">
-		12
-		<div class="subTimeMarker">
-				15
-				30
-				45
+	{{#each times}}
+		<div id="{{hour}}"class="timeMarker" style="top:{{topHour}}" ondrop="drop(event)" ondragover="allowDrop(event)">
+			{{hour}}
 		</div>
-	</div>
-	<div class="timeMarker" style="top:140px">
-		1
-		<div class="subTimeMarker">
-				15
-				30
-				45
+		<div id="{{hour}}.25" class="subTimeMarker" style="top:{{top15}}" ondrop="drop(event)" ondragover="allowDrop(event)">
+			15
 		</div>
-	</div>
-	<div class="timeMarker" style="top:220px">
-		2
-		<div class="subTimeMarker">
-				15
-				30
-				45
+		<div id="{{hour}}.5" class="subTimeMarker" style="top:{{top30}}"  ondrop="drop(event)" ondragover="allowDrop(event)">
+			30
 		</div>
-	</div>
-	<div class="timeMarker" style="top:300px">
-		3
-		<div class="subTimeMarker">
-				15
-				30
-				45
+		<div id="{{hour}}.75" class="subTimeMarker" style="top:{{top45}}"  ondrop="drop(event)" ondragover="allowDrop(event)">
+			45
 		</div>
-	</div>
-	<div class="timeMarker" style="top:380px">
-		4
-		<div class="subTimeMarker">
-				15
-				30
-				45
-		</div>
-	</div>
-	<div class="timeMarker" style="top:460px">
-		5
-		<div class="subTimeMarker">
-				15
-				30
-				45
-		</div>
-	</div>
-	<div class="timeMarker" style="top:540px">
-		6
-		<div class="subTimeMarker">
-				15
-				30
-				45
-		</div>
-	</div>
-	<div class="timeMarker" style="top:620px">
-		7
-		<div class="subTimeMarker">
-				15
-				30
-				45
-		</div>
-	</div>
+	{{/each}}
 	{{#each events}}
-      		<div class={{class}} style="height: {{height}}; top:{{top}}">
+      		<div class={{class}} id={{title}} style="height: {{height}}; top:{{top}}" draggable="true" ondragstart="drag(event)">
 
          		<a href"#" class="title">
        				<h4>{{title}}</h4>
