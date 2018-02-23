@@ -18,6 +18,7 @@
 	}
 	</style>
 	<script>
+	
 	function allowDrop(ev) {
     	ev.preventDefault();
 	}
@@ -29,7 +30,9 @@
 	function drop(ev) {
     	ev.preventDefault();
     	var data = ev.dataTransfer.getData("text");
-    	console.log(ev.target);
+    	changeTime(ev);
+    	//console.log({{events}});
+    	//data.events[]
     	document.getElementById(data).style.top = ev.target.style.top;
     	//ev.target.appendChild(document.getElementById(data));
 	}
@@ -58,7 +61,7 @@
   </button>
 	</div>
 	{{#each times}}
-		<div id="{{hour}}"class="timeMarker" style="top:{{topHour}}" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<div id="{{hour}}" class="timeMarker" style="top:{{topHour}}" ondrop="drop(event)" ondragover="allowDrop(event)">
 			{{hour}}
 		</div>
 		<div id="{{hour}}.25" class="subTimeMarker" style="top:{{top15}}" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -72,12 +75,12 @@
 		</div>
 	{{/each}}
 	{{#each events}}
-      		<div class={{class}} id={{title}} style="height: {{height}}; top:{{top}}" draggable="true" ondragstart="drag(event)">
+      	<div class={{class}} id={{title}} style="height: {{height}}; top:{{top}}" draggable="true" ondragstart="drag(event)">
 
-         		<a href"#" class="title">
-       				<h4>{{title}}</h4>
-       			</a>
-       			<p>{{description}}</p>
+       		<a href"#" class="title">
+   				<h4>{{title}}</h4>
+  			</a>
+    		<p>{{description}}</p>
        			
    			</div>
    			<hr>

@@ -25,7 +25,19 @@ function projectClick(e) { 
 
 }
 function addTask(result) {
-	console.log(result);
+	//console.log(result);
+	
+}
+function changeTime(ev) {
+	console.log(ev.target);
+	$.post("/", {"modifyTask": true,
+					"taskName":ev.dataTransfer.getData("text"),
+					"taskTime":ev.target.id,
+					"taskTop":ev.target.style.top}, modifyTask);
+	
+}
+function modifyTask(result) {
+	//console.log(result);
 }
 
 
