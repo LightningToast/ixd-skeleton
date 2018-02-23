@@ -16,11 +16,35 @@
     <link href="signin.css" rel="stylesheet">
   </head>
   <body>
+    <script>
+    window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{317783162076403}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{v4.0}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+    };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
     <div class="container">
 
       <form class="form-signin">
         <h1 class="form-signin-heading" style="text-align: center">Please Log In</h1>
+         <p class="facebookLogin">Login through Facebook</p>
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button>
         <label for="inputEmail" class="sr-only"></label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only"></label>

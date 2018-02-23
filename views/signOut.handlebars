@@ -33,6 +33,10 @@
         <a href="/"><button class="btn btn-lg btn-block" type="button">Log In</button></a>
       </form>
 
+      <p class="facebookLogin">Please login through Facebook</p>
+      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+      </fb:login-button>
+
     </div> <!-- /container -->
 
 
@@ -42,5 +46,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+    {{> facebook}}
+  <script src="/js/facebook.js"></script>
   </body>
 </html>
