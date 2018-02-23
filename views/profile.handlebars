@@ -95,6 +95,7 @@
 }
 
 function changeUser(response) {
+  $('#name').html(response.name);
   $('.img').attr('src', response.picture.data.url);
 }
 </script>
@@ -111,6 +112,7 @@ function changeUser(response) {
   <img src="/css/lorempixel.technics.1.jpeg" alt="image" class="img">
 </div>
   <h3>Welcome</h3>
+  <h4 id="name" style="text-align: center">User</h2>
 <form>
   <div class="form-group row">
     <label for="title" class="col-sm-2 col-form-label">Go to sleep at</label>
