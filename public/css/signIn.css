@@ -1,12 +1,12 @@
 body {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #132639;
-  font-family: Burford, Arial, Helvetica, sans-serif;
+  background-color: #056571;
+  font-family: Georgia, Burford, Arial, Helvetica, sans-serif;
 }
 
 button {
-    background-color: #ff9966;
+    background-color: #FF6A5C;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -27,11 +27,16 @@ button {
     
 }
 
+h1 {
+  font-family: Comic Sans MS, sans-serif;
+}
+
 
 .form-signin {
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
+  color: white;
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
