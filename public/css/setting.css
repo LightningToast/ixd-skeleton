@@ -14,6 +14,10 @@ h3 {
 	font-family: Burford, Arial, Helvetica, sans-serif;
 }
 
+body {
+	background-color: = blue;
+}
+
 .buttonHolder {
   text-align: center;
   position: relative;
@@ -23,7 +27,7 @@ h3 {
 
 .btn-back {
   margin-top: 10px;
-  background-color: #428bca;
+  background-color: #ff9966;
 }
 
 a {
