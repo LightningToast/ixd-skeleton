@@ -636,7 +636,7 @@
             startHour: null,
             startMinutes: null,
             startTime: null,
-            interval: 30,
+            interval: 15,
             dynamic: true,
             theme: 'standard',
             zindex: null,
