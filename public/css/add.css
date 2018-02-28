@@ -52,7 +52,7 @@ h1 {
 
 .btn-back {
   margin-top: 10px;
-  background-color: #428bca;
+  background-color: #FF6A5C;
 }
 
 a {
@@ -63,6 +63,3 @@ body {
   background-color: #056571;
 }
 
-#eventInput {
-  color: white;
-}
