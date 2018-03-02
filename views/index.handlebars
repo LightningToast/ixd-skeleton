@@ -94,15 +94,11 @@
 		</div>
 	{{/each}}
 	{{#each events}}
-      	<div class={{class}} id={{title}} style="height: {{height}}; top:{{top}}" draggable="true" ondragstart="drag(event)">
+      	<div class={{class}} id={{title}} style="height: {{height}}; top:{{top}}" draggable="true" ondragstart="drag(event)">       		
+   			<h4>{{title}}</h4>
 
-       		
-   				<h4>{{title}}</h4>
-  			
-    		
-       			
-   			</div>
-   			<hr>
+   		</div>
+
     {{/each}}	
 
 	<script src="js/bootstrap.js"></script>

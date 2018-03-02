@@ -11,8 +11,9 @@
   <script type="text/javascript" src="/js/jquery.timepicker.js"></script>
   <link rel="stylesheet" type="text/css" href="/css/jquery.timepicker.css">
   <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/introHCI.css" rel="stylesheet">
   <link href="/css/add.css" rel="stylesheet">
-  <script src="/js/taskAdd.js"></script>
+  <script src="/js/taskAddB.js"></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
   </button>
   <h1><font color="white">Task</font></h1>
 
-<form id-"eventInput">
+<form>
   <div class="form-group row">
     <label for="title" class="col-sm-2 col-form-label"><font color="white">Title</font></label>
     <div class="col-sm-10">
@@ -32,7 +33,7 @@
   <div class="form-group row">
     <label for="start" class="col-sm-2 col-form-label"><font color="white">Start</font></label>
     <div class="col-sm-10">
-      <input type="start" class="form-control timepicker" id="startForm">
+      <input type="start" class="form-control timepicker" value = "12:00 PM" id="startForm">
     </div>
     <script>
      $(document).ready(function(){
@@ -43,7 +44,7 @@
   <div class="form-group row">
     <label for="start" class="col-sm-2 col-form-label"><font color="white">End</font></label>
     <div class="col-sm-10">
-      <input type="end" class="form-control timepicker" id="endAt">
+      <input type="end" class="form-control timepicker" value = "8:00 PM" id="endAt">
     </div>
     <script>
      $(document).ready(function(){
@@ -60,28 +61,36 @@
         <option>0.5 hr</option>
         <option>0.75 hr</option>
         <option>1 hr</option>
+        <option>1.25 hr</option>
+        <option>1.5 hr</option>
+        <option>1.75 hr</option>
+        <option>2 hr</option>
+        <option>2.25 hr</option>
+        <option>2.5 hr</option>
+        <option>2.75 hr</option>
+        <option>3 hr</option>
       </select>
     </div>
 
   </div>
 
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+   <hr>
+  <hr>
+  <hr>
 
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-  
 <div class="buttonHolder">
   <!--<button type="button" class="btn btn-primary"><a href="/">Reset</a></button>-->
 
-  <button id="myelement" type="button" class="btn btn-primary">
+  <button id="myelement" type="button" class="btn btn-primary" style="top:800px">
       
       <a href="/">Add</a>
     
@@ -89,32 +98,74 @@
 </div>
 
 </form>
+<div id="startTime" class="timeMarker" style="top:380px" >
+      12
+</div>
+<div id="endTime" class="timeMarker" style="top:630px" >
+      12
+</div>
 
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
+        <div class=task id=temp style="height: 60px; top:420px">
+
+          
+          <script>document.getElementById("titleForm").value</script>
+        
+        
+            
+      </div>
+
+    
+
+
 <button id="sessionClear" type="button" class="btn btn-primary">
       
       (Ignore me)
     
   </button>
   
+
+<script>
+var xTriggered = 0;
+$( "#titleForm" ).keydown(function( event ) {
+  if ( event.which == 13 ) {
+   event.preventDefault();
+  }
+  xTriggered++;
+  var msg = "Handler for .keydown() called " + xTriggered + " time(s).";
+  console.log("typed");
+  document.getElementById('temp').innerHTML = document.getElementById("titleForm").value;
+});
+
+$( "#startForm" ).mouseleave(function( event ) {
+  if ( event.which == 13 ) {
+   event.preventDefault();
+  }
+  xTriggered++;
+  var msg = "Handler for .keydown() called " + xTriggered + " time(s).";
+  console.log("typed");
+  document.getElementById('startTime').innerHTML = document.getElementById("startForm").value;
+});
+$( "#endAt" ).mouseleave(function( event ) {
+  if ( event.which == 13 ) {
+   event.preventDefault();
+  }
+  xTriggered++;
+  var msg = "Handler for .keydown() called " + xTriggered + " time(s).";
+  console.log(document.getElementById("endAt").value);
+  document.getElementById('endTime').innerHTML = document.getElementById("endAt").value;
+});
+$( "#durationForm" ).mouseleave(function( event ) {
+  if ( event.which == 13 ) {
+   event.preventDefault();
+  }
+  xTriggered++;
+  var msg = "Handler for .keydown() called " + xTriggered + " time(s).";
+  console.log(document.getElementById("durationForm").value);
+  var durLen = document.getElementById("durationForm").value;
+  durLen = parseFloat(durLen);
+  document.getElementById('temp').style.height = durLen * 60 + "px";
+  console.log(durLen * 60 + "px");
+});
+</script>
 </body>
 </html>

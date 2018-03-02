@@ -10,10 +10,9 @@
 }
 .task {
 	position: absolute;
+	text-decoration-color: #ffffff;
 	right:0;
 	width: 90%;
-
-	/*height: 30%;*/
 	margin-left: auto;
     background-color: #414141;
     text-align: center;
@@ -25,8 +24,6 @@
 	position: absolute;
 	right:0;
 	width: 90%;
-	/*height:100px;*/
-	/*height: 30%;*/
 	margin-left: auto;
     background-color: #FF6A5C;
     text-align: center;
@@ -34,6 +31,28 @@
     border: 2px solid #e55042;
     border-radius: 10px;
 }
+.indicatorLineTask {
+	position: absolute;
+	height:5px;
+	width: : 50px;
+	z-index: 10;
+	background-color: #414141;
+	/*border: 2px solid #302e2e;*/
+	
+
+
+}
+.indicatorLineAppointment {
+	position: absolute;
+	height:5px;
+	width: : 50%;
+	background-color: #FF6A5C;
+	border: 2px solid #e55042;
+	
+
+
+}
+
 .header {
 	text-align: center;
 	position: sticky;
@@ -45,12 +64,14 @@
 }
 .timeMarker {
 	position: absolute;
+	color: #ffffff;
     left: 5px;
     width: 100%;
 }
 .subTimeMarker {
 	position: absolute;
-    color: #a3a3a3;
+    color: #b2b0b0;
+    left: 10px;
     width: 100%;
 }
 .loginPrompt {
@@ -75,6 +96,7 @@
 	background-color: #efc35d;
 	border: 2px solid #e29f31;
 }
+
 h1, h2, h3, h5 {
 	color: #353638;
 }
