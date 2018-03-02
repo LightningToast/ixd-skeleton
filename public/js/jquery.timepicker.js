@@ -627,14 +627,14 @@
 
         $.TimePicker.defaults =  {
             timeFormat: 'hh:mm p',
-            minHour: null,
-            minMinutes: null,
+            minHour: 12,
+            minMinutes: 0,
             minTime: null,
             maxHour: null,
             maxMinutes: null,
             maxTime: null,
-            startHour: null,
-            startMinutes: null,
+            startHour: 12,
+            startMinutes: 0,
             startTime: null,
             interval: 15,
             dynamic: true,
