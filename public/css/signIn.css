@@ -28,7 +28,17 @@ button {
 }
 
 h1 {
-  font-family: Georgia, sans-serif;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  font-family: Georgia, Burford, Arial, Helvetica, sans-serif;
+}
+
+.buttonHolder {
+  text-align: center;
+  position: relative;
+  margin-top: 20%;
 }
 
 
