@@ -49,8 +49,7 @@ function initializePage() {
 	$(".btn-next").click(function(e){
 		console.log("add");
 		$(".addPrompt").show();
-
-	})
+	});
 
 }
 function projectClick(e) { 

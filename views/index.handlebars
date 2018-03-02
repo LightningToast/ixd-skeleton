@@ -8,11 +8,11 @@
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 	<link href="/css/introHCI.css" rel="stylesheet">
 	<!--<link href="/css/signin.css" rel="stylesheet">-->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/indexLoad.js"></script>
-	<link href="/css/add.css" rel="stylesheet">
 	<style>
 	#div1 {
 	    width: 350px;
@@ -81,7 +81,7 @@
   		</button>
 	</div>
 
-	<!--
+	
 	<div class="container addPrompt">
     <h1><font color="white">Task</font></h1>
 	<form id-"eventInput">
@@ -133,20 +133,13 @@
       <option>Low</option>
     </select>
     </div>
-  </div>
+  </div> 
 </form>
-</div>
-
-  
 <div class="buttonHolder">
-  <button type="button" class="btn btn-primary"><a href="/">Reset</a></button>
-
-  <button id="myelement" type="button" class="btn btn-primary btn-add">
-      
+	<button id="myelement" type="button" class="btn btn-primary btn-add">
       <a href="/">Submit</a>
-    
-  </button>
-  -->
+    </button>
+</div>
 </div>
 	{{#each times}}
 		<div id="{{hour}}" class="timeMarker" style="top:{{topHour}}" ondrop="drop(event)" ondragover="allowDrop(event)">

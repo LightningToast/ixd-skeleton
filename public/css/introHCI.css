@@ -105,3 +105,13 @@ button {
     margin-right: 10px;
     width: 120px;
 }
+
+.addPrompt {
+	background-color: #efc35d;
+	z-index: 12;
+	position: fixed;
+	right: 5%;
+	top:10%;
+	min-width: 300px;
+	min-height: 100px;
+}
