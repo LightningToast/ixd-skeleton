@@ -15,10 +15,10 @@
 
 	/*height: 30%;*/
 	margin-left: auto;
-    background-color: #ef8b8b;
+    background-color: #414141;
     text-align: center;
     padding: 2px;
-    border: 2px solid #cc5555;
+    border: 2px solid #302e2e;
     border-radius: 10px;
 }
 .appointment {
@@ -28,10 +28,10 @@
 	/*height:100px;*/
 	/*height: 30%;*/
 	margin-left: auto;
-    background-color: #a8e88d;
+    background-color: #FF6A5C;
     text-align: center;
     padding: 2px;
-    border: 2px solid #699b53;
+    border: 2px solid #e55042;
     border-radius: 10px;
 }
 .header {
