@@ -134,5 +134,17 @@
 			"height": "80px",
 			"top": "620px"
 		}
+	],
+	"newEvent": [
+		{
+			"title": "Title",
+			"description": "",
+			"timeStart": "0",
+			"timeEnd": "12",
+			"duration": "1",
+			"class": "task",
+			"height": "40px",
+			"top": "60px"
+		}
 	]
 }
