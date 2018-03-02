@@ -3,6 +3,7 @@ h1 {
   font-size: 36px;
   margin-bottom: 20px;
   margin-top: 0px;
+  font-family: Georgia, Burford, Arial, Helvetica, sans-serif;
 }
 
 .form-inline label {
@@ -18,36 +19,15 @@ h1 {
     position: relative;
   }
 
-@media (max-width: 767px) {
-  .form-inline .form-control {
-    width: auto;
-    display: inline-block;
-    position: relative;
-  }
-  .form-inline label {
-    margin-right: 10px;
-  }
-  .form-inline .form-group {
-    display: inline-block;
-    margin-bottom: 10px;
-    vertical-align: middle;
-    text-align: center;
-  }
-
-  .form-inline input {
-    border:1px; 
-    border-bottom-style: solid;
-    border-top-style: none;
-    border-left-style:none;
-    border-right-style:none;
-    position: relative;
-  }
-}
 
 .buttonHolder {
   text-align: center;
   position: relative;
-  margin-top: 20%;
+}
+
+.btn-add {
+  width: 140px;
+  height: 50px;
 }
 
 .btn-back {
@@ -61,5 +41,6 @@ a {
 
 body {
   background-color: #056571;
+  font-family: Georgia, Burford, Arial, Helvetica, sans-serif;
 }
 

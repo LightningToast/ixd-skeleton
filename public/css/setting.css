@@ -1,10 +1,11 @@
+
 h1 {
-	text-align: center;
-	font-size: 36px;
-	margin-bottom: 20px;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
   margin-top: 0px;
   font-family: Georgia, Burford, Arial, Helvetica, sans-serif;
-  color: white;
+  color:white;
 }
 
 h3 {
@@ -18,13 +19,12 @@ h3 {
 
 body {
 	background-color: #056571;
+	font-family: Georgia, Burford, Arial, Helvetica, sans-serif;
 }
 
 .buttonHolder {
   text-align: center;
   position: relative;
-  margin-top: 20%;
-  
 }
 
 .btn-back {
@@ -45,5 +45,21 @@ img {
 .imgHolder {
 	text-align: center;
 	border-color: white;
+}
+
+.btn-signOut {
+	width: 250px;
+	height: 50px;
+	margin-top: 50px;
+}
+
+.btn-danger {
+	width: 120px;
+	height: 50px;
+}
+
+.btn-set {
+	width: 100px;
+	height: 50px;
 }
 

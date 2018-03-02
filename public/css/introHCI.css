@@ -70,25 +70,38 @@
 	right: 5%;
 	top: 35%;
 	z-index: 11;
-    width: 90%;
-    height: 30%;
+    width: 80%;
+    height: 20%;
 	background-color: #efc35d;
 	border: 2px solid #e29f31;
+	border-radius: 20px;
+	font-family: Georgia, Burford, Arial, Helvetica, sans-serif;
 }
 h1, h2, h3, h5 {
 	color: #353638;
+	font-family: Georgia, Burford, Arial, Helvetica;
 }
 
 h4 {
 	color: white;
+	font-family: Georgia, Burford, Arial, Helvetica, sans-serif;
 }
 
 body {
 	background-color: #056571;
+	font-family: Georgia, Burford, Arial, Helvetica, sans-serif;
 }
 
 button {
     background-color: #FF6A5C;
     color: white;
-    }
+    font-family: Georgia, Burford, Arial, Helvetica, sans-serif;
+
+}
+
+.btn-re {
+	border-radius-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 120px;
 }
