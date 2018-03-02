@@ -14,6 +14,7 @@ var profile = require('./routes/profile');
 var schedule = require('./routes/schedule');
 var signOut = require('./routes/signOut');
 var task = require('./routes/task');
+var taskB = require('./routes/taskB')
 
 
 
@@ -50,6 +51,7 @@ app.get('/schedule', schedule.view);
 app.get('/signOut', signOut.view);
 app.get('/task', task.view);
 app.post('/', index.setData);
+app.get("/taskb",taskB.view )
 // Example route
 // app.get('/users', user.list);
 
