@@ -4,14 +4,15 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.timepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/jquery.timepicker.css">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
 	<link href="/css/introHCI.css" rel="stylesheet">
 	<!--<link href="/css/signin.css" rel="stylesheet">-->
-	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/indexLoad.js"></script>
 	<style>
 	#div1 {
@@ -83,7 +84,7 @@
 
 	
 	<div class="container addPrompt">
-    <h1><font color="white">Task</font></h1>
+    <h1 class="title"><font color="white">Task</font></h1>
 	<form id-"eventInput">
   		<div class="form-group row">
     		<label for="title" class="col-sm-2 col-form-label"><font color="white">Title</font></label>
@@ -140,7 +141,8 @@
       <a href="/">Submit</a>
     </button>
 </div>
-</div>
+
+</div class="loop">
 	{{#each times}}
 		<div id="{{hour}}" class="timeMarker" style="top:{{topHour}}" ondrop="drop(event)" ondragover="allowDrop(event)">
 			{{hour}}
@@ -166,9 +168,5 @@
    			</div>
    			<hr>
     {{/each}}	
-
-	<script src="js/bootstrap.js"></script>
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
 </body>
 </html>

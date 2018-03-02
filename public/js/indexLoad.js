@@ -49,6 +49,7 @@ function initializePage() {
 	$(".btn-next").click(function(e){
 		console.log("add");
 		$(".addPrompt").show();
+		//$(".loop").css("opacity", "0.3");
 	});
 
 }

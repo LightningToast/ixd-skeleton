@@ -9,8 +9,9 @@
 
 .ui-timepicker-container {
     position: absolute;
-    overflow: hidden;
     box-sizing: border-box;
+    z-index: 12;
+    background-color: white;
 }
 
 .ui-timepicker {
@@ -31,6 +32,9 @@
     padding: 0;
     overflow: auto;
     overflow-x: hidden; /* IE */
+    z-index: 12;
+    background-color: white;
+    position: relative;
 }
 
 .ui-timepicker-standard {
