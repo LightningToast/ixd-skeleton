@@ -30,7 +30,7 @@
     </div>
   </div>
   <div class="form-group row">
-    <label for="start" class="col-sm-2 col-form-label"><font color="white">Start</font></label>
+    <label for="start" class="col-sm-2 col-form-label"><font color="white">Start By</font></label>
     <div class="col-sm-10">
       <input type="start" class="form-control timepicker" id="startForm">
     </div>
@@ -40,18 +40,7 @@
       });
     </script>
   </div>
-  <div class="form-group row">
-    <label for="start" class="col-sm-2 col-form-label"><font color="white">End</font></label>
-    <div class="col-sm-10">
-      <input type="end" class="form-control timepicker" id="endAt">
-    </div>
-    <script>
-     $(document).ready(function(){
-        $('input.timepicker').timepicker({});
-      });
-    </script>
-  </div>
-  <div class="form-group row">
+  <div class="form-group row sub">
     <label for="duration" class="col-sm-2 col-form-label"><font color="white">Duration</font></label>
     <div class="col-sm-10">     
     <select id="durationForm" class="form-control">
@@ -62,65 +51,40 @@
     </select>
     </div>
   </div>
-</div>
-
-  <!--
   <div class="form-group row">
-    <label for="title" class="col-sm-2 col-form-label">Duration</label>
-    <div class="col-sm-5">
-      <input type="title" class="form-control" id="duration" placeholder="1 Hour">
+    <label for="start" class="col-sm-2 col-form-label"><font color="white">Deadline</font></label>
+    <div class="col-sm-10">
+      <input type="end" class="form-control timepicker" id="endAt">
     </div>
-</div>
-  -->
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
+    <script>
+     $(document).ready(function(){
+        $('input.timepicker').timepicker({});
+      });
+    </script>
+  </div>
+  <div class="form-group row">
+    <label for="priority" class="col-sm-2 col-form-label"><font color="white">Priority</font></label>
+    <div class="col-sm-10">     
+    <select id="priorityForm" class="form-control">
+      <option>High</option>
+      <option>Medium</option>
+      <option>Low</option>
+    </select>
+    </div>
+  </div>
+
   
 <div class="buttonHolder">
   <!--<button type="button" class="btn btn-primary"><a href="/">Reset</a></button>-->
 
   <button id="myelement" type="button" class="btn btn-primary btn-add">
       
-      <a href="/">Add</a>
+      <a href="/">Submit</a>
     
   </button>
 </div>
 
-</form>
 
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<button id="sessionClear" type="button" class="btn btn-primary">
-      
-      (Ignore me)
-    
-  </button>
   
 </body>
 </html>

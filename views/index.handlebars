@@ -12,6 +12,7 @@
 	<!--<link href="/css/signin.css" rel="stylesheet">-->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/indexLoad.js"></script>
+	<link href="/css/add.css" rel="stylesheet">
 	<style>
 	#div1 {
 	    width: 350px;
@@ -48,8 +49,8 @@
 			<!--<i class="material-icons">user</i>-->
      		<a href="profile"><span class="glyphicon glyphicon-user"></span>	</a>
  		</button>
- 		<button type="button" class="btn btn-sm btn-back" style="position: absolute; right:10px; top:0;">
-     		<a href="task"><span class="glyphicon glyphicon-plus"></span>	</a>
+ 		<button type="button" class="btn btn-sm btn-back btn-next" style="position: absolute; right:10px; top:0;">
+     		<span class="glyphicon glyphicon-plus"></span>	</a>
  		</button>
 	</div>
 </head>
@@ -79,6 +80,74 @@
 		</h2>       
   		</button>
 	</div>
+
+	<!--
+	<div class="container addPrompt">
+    <h1><font color="white">Task</font></h1>
+	<form id-"eventInput">
+  		<div class="form-group row">
+    		<label for="title" class="col-sm-2 col-form-label"><font color="white">Title</font></label>
+    		<div class="col-sm-10">
+      		<input type="title" class="form-control" id="titleForm" placeholder="ex. Homework, Laundry, etc.">
+    		</div>
+  		</div>
+  		<div class="form-group row">
+    		<label for="start" class="col-sm-2 col-form-label"><font color="white">Start By</font></label>
+    		<div class="col-sm-10">
+      		<input type="start" class="form-control timepicker" id="startForm">
+    		</div>
+    		<script>
+     		$(document).ready(function(){
+        	$('input.timepicker').timepicker({});
+      		});
+    		</script>
+ 		 </div>
+  		<div class="form-group row sub">
+    	<label for="duration" class="col-sm-2 col-form-label"><font color="white">Duration</font></label>
+    	<div class="col-sm-10">     
+    	<select id="durationForm" class="form-control">
+      	<option>0.25 hr</option>
+      	<option>0.5 hr</option>
+      	<option>0.75 hr</option>
+      	<option>1 hr</option>
+    	</select>
+    	</div>
+  		</div>
+  	<div class="form-group row">
+    <label for="start" class="col-sm-2 col-form-label"><font color="white">Deadline</font></label>
+    <div class="col-sm-10">
+      <input type="end" class="form-control timepicker" id="endAt">
+    </div>
+    <script>
+     $(document).ready(function(){
+        $('input.timepicker').timepicker({});
+      });
+    </script>
+  </div>
+  <div class="form-group row">
+    <label for="priority" class="col-sm-2 col-form-label"><font color="white">Priority</font></label>
+    <div class="col-sm-10">     
+    <select id="priorityForm" class="form-control">
+      <option>High</option>
+      <option>Medium</option>
+      <option>Low</option>
+    </select>
+    </div>
+  </div>
+</form>
+</div>
+
+  
+<div class="buttonHolder">
+  <button type="button" class="btn btn-primary"><a href="/">Reset</a></button>
+
+  <button id="myelement" type="button" class="btn btn-primary btn-add">
+      
+      <a href="/">Submit</a>
+    
+  </button>
+  -->
+</div>
 	{{#each times}}
 		<div id="{{hour}}" class="timeMarker" style="top:{{topHour}}" ondrop="drop(event)" ondragover="allowDrop(event)">
 			{{hour}}

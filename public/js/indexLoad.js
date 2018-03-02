@@ -12,6 +12,7 @@ $(document).ready(function() {
 function initializePage() {
 	//console.log(document.getElementById("startForm").value);
 	$(".reschedulePrompt").hide();
+	$(".addPrompt").hide();
 	$("#rescheduleBeginButton").click(function(e) {
 		$(".reschedulePrompt").hide();
 	});
@@ -44,6 +45,12 @@ function initializePage() {
 					"taskName":e.target.id}, rescheduleTask);
 		*/
 	});
+
+	$(".btn-next").click(function(e){
+		console.log("add");
+		$(".addPrompt").show();
+
+	})
 
 }
 function projectClick(e) { 
