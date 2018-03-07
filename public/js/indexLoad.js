@@ -52,6 +52,20 @@ function initializePage() {
 		//$(".loop").css("opacity", "0.3");
 	});
 
+	$("#AddSubmit").click(function(e){
+		console.log("adding task");
+		$.post("/", {"title": document.getElementById("titleForm").value,
+				"description": "",
+				"timeStart": document.getElementById("startForm").value,
+				"timeEnd": "5",
+				"duration": document.getElementById("durationForm").value,
+				"class": "task",
+				"height": "80px",
+				"top": "380px"}, addTask);
+		//$(".addPrompt").show();
+		//$(".loop").css("opacity", "0.3");
+	});
+
 }
 function projectClick(e) { 
     // prevent the page from reloading      
