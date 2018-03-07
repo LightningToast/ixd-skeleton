@@ -52,6 +52,7 @@ app.get('/signOut', signOut.view);
 app.get('/task', task.view);
 app.post('/', index.setData);
 app.get("/taskb",taskB.view )
+app.get('/indexB', index.indexB);
 // Example route
 // app.get('/users', user.list);
 

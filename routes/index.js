@@ -9,6 +9,13 @@ var initialHeightBuffer = 80;
 exports.view = function(req, res){
 	//console.log(res);
   	res.render('index', data);
+  	data["indexB"] = false;
+};
+
+exports.indexB = function(req, res){
+	//console.log(res);
+  	res.render('index', data);
+  	data["indexB"] = true;
 };
 exports.setData = function (req, res) {
 	console.log("setData");

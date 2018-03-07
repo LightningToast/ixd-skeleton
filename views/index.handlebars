@@ -50,9 +50,15 @@
 			<!--<i class="material-icons">user</i>-->
      		<a href="profile"><span class="glyphicon glyphicon-user"></span>	</a>
  		</button>
- 		<button type="button" class="btn btn-sm btn-back btn-next" style="position: absolute; right:10px; top:0;">
-     		<span class="glyphicon glyphicon-plus"></span>	</a>
- 		</button>
+    {{#if indexB}}
+             <button type="button" class="btn btn-sm" style="position: absolute; right:10px; top:0;">
+        <a href="taskB"><span class="glyphicon glyphicon-plus"></span>  </a></button>
+
+    {{else}}
+    <button type="button" class="btn btn-sm btn-back btn-next" style="position: absolute; right:10px; top:0;">
+        <span class="glyphicon glyphicon-plus"></span>  </a> 
+    </button>
+    {{/if}} 
 	</div>
 </head>
 
@@ -82,39 +88,38 @@
   		</button>
 	</div>
 
-	
-	<div class="container addPrompt">
+  <div class="container addPrompt">
     <h1 class="title"><font color="white">Task</font></h1>
-	<form id-"eventInput">
-  		<div class="form-group row">
-    		<label for="title" class="col-sm-2 col-form-label"><font color="white">Title</font></label>
-    		<div class="col-sm-10">
-      		<input type="title" class="form-control" id="titleForm" placeholder="ex. Homework, Laundry, etc.">
-    		</div>
-  		</div>
-  		<div class="form-group row">
-    		<label for="start" class="col-sm-2 col-form-label"><font color="white">Start By</font></label>
-    		<div class="col-sm-10">
-      		<input type="start" class="form-control timepicker" id="startForm">
-    		</div>
-    		<script>
-     		$(document).ready(function(){
-        	$('input.timepicker').timepicker({});
-      		});
-    		</script>
- 		 </div>
-  		<div class="form-group row sub">
-    	<label for="duration" class="col-sm-2 col-form-label"><font color="white">Duration</font></label>
-    	<div class="col-sm-10">     
-    	<select id="durationForm" class="form-control">
-      	<option>0.25 hr</option>
-      	<option>0.5 hr</option>
-      	<option>0.75 hr</option>
-      	<option>1 hr</option>
-    	</select>
-    	</div>
-  		</div>
-  	<div class="form-group row">
+  <form id-"eventInput">
+      <div class="form-group row">
+        <label for="title" class="col-sm-2 col-form-label"><font color="white">Title</font></label>
+        <div class="col-sm-10">
+          <input type="title" class="form-control" id="titleForm" placeholder="ex. Homework, Laundry, etc.">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="start" class="col-sm-2 col-form-label"><font color="white">Start By</font></label>
+        <div class="col-sm-10">
+          <input type="start" class="form-control timepicker" id="startForm">
+        </div>
+        <script>
+        $(document).ready(function(){
+          $('input.timepicker').timepicker({});
+          });
+        </script>
+     </div>
+      <div class="form-group row sub">
+      <label for="duration" class="col-sm-2 col-form-label"><font color="white">Duration</font></label>
+      <div class="col-sm-10">     
+      <select id="durationForm" class="form-control">
+        <option>0.25 hr</option>
+        <option>0.5 hr</option>
+        <option>0.75 hr</option>
+        <option>1 hr</option>
+      </select>
+      </div>
+      </div>
+    <div class="form-group row">
     <label for="start" class="col-sm-2 col-form-label"><font color="white">Deadline</font></label>
     <div class="col-sm-10">
       <input type="end" class="form-control timepicker" id="endAt">
@@ -137,32 +142,46 @@
   </div> 
 </form>
 <div class="buttonHolder">
-	<button id="myelement" type="button" class="btn btn-primary btn-add">
+  <button id="myelement" type="button" class="btn btn-primary btn-add">
       <a href="/">Submit</a>
     </button>
 </div>
 
 </div class="loop">
-	{{#each times}}
-		<div id="{{hour}}" class="timeMarker" style="top:{{topHour}}" ondrop="drop(event)" ondragover="allowDrop(event)">
-			{{hour}}
-		</div>
-		<div id="{{hour}}.25" class="subTimeMarker" style="top:{{top15}}" ondrop="drop(event)" ondragover="allowDrop(event)">
-			15
-		</div>
-		<div id="{{hour}}.5" class="subTimeMarker" style="top:{{top30}}"  ondrop="drop(event)" ondragover="allowDrop(event)">
-			30
-		</div>
-		<div id="{{hour}}.75" class="subTimeMarker" style="top:{{top45}}"  ondrop="drop(event)" ondragover="allowDrop(event)">
-			45
-		</div>
-	{{/each}}
-	{{#each events}}
-      	<div class={{class}} id={{title}} style="height: {{height}}; top:{{top}}" draggable="true" ondragstart="drag(event)">       		
-   			<h4>{{title}}</h4>
+  {{#each times}}
+    <div id="{{hour}}" class="timeMarker" style="top:{{topHour}}" ondrop="drop(event)" ondragover="allowDrop(event)">
+      {{hour}}
+    </div>
+    <div id="{{hour}}.25" class="subTimeMarker" style="top:{{top15}}" ondrop="drop(event)" ondragover="allowDrop(event)">
+      15
+    </div>
+    <div id="{{hour}}.5" class="subTimeMarker" style="top:{{top30}}"  ondrop="drop(event)" ondragover="allowDrop(event)">
+      30
+    </div>
+    <div id="{{hour}}.75" class="subTimeMarker" style="top:{{top45}}"  ondrop="drop(event)" ondragover="allowDrop(event)">
+      45
+    </div>
+  {{/each}}
+  {{#each events}}
+        <div class={{class}} id={{title}} style="height: {{height}}; top:{{top}}" draggable="true" ondragstart="drag(event)">           
+        <h4>{{title}}</h4>
 
-   		</div>
+      </div>
 
-    {{/each}}	
+    {{/each}} 
+
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115027404-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115027404-3');
+</script>
+
 </body>
 </html>
