@@ -8,14 +8,16 @@ var hourHeight = 60;
 var initialHeightBuffer = 80;
 exports.view = function(req, res){
 	//console.log(res);
-  	res.render('index', data);
   	data["indexB"] = false;
+  	res.render('index', data);
+  	
 };
 
 exports.indexB = function(req, res){
 	//console.log(res);
-  	res.render('index', data);
   	data["indexB"] = true;
+  	res.render('index', data);
+  	
 };
 exports.setData = function (req, res) {
 	console.log("setData");
