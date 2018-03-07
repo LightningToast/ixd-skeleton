@@ -52,6 +52,12 @@ function initializePage() {
 		//$(".loop").css("opacity", "0.3");
 	});
 
+
+	$(".gaClick").click(function(e){
+		console.log("clicked");
+		gtag("send", "event", 'like', 'click');
+	});
+
 	$("#AddSubmit").click(function(e){
 		console.log("adding task");
 		$.post("/", {"title": document.getElementById("titleForm").value,
