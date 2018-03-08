@@ -38,4 +38,11 @@ function addTask(result) {
 }
 
 
+$('.gaClick2').click(sendBtnClick);
+console.log("clicked");
+
+	function sendBtnClick(event){
+ga("send","event", 'addClicked', 'click');
+}
+
 

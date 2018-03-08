@@ -53,10 +53,12 @@ function initializePage() {
 	});
 
 
-	$(".gaClick").click(function(e){
-		console.log("clicked");
-		gtag("send", "event", 'like', 'click');
-	});
+$('.gaClick').click(sendBtnClick);
+console.log("clicked");
+
+	function sendBtnClick(event){
+ga("send","event", 'submitClicked', 'click');
+}
 
 	$("#AddSubmit").click(function(e){
 		console.log("adding task");
