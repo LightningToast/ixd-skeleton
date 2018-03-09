@@ -31,7 +31,8 @@ exports.setData = function (req, res) {
 				if(data.events[event].title == req.body.taskName) {
 					console.log(data.events[event]);
 					data.events[event].start = req.body.taskTime;
-					data.events[event].end = req.body.taskTime + data.events[event].duration;
+					var timeEnd = parseFloat(req.body.taskTime) + parseFloat(data.events[event].duration);
+					data.events[event].end = timeEnd;
 					data.events[event].top = req.body.taskTop;
 					console.log(data.events[event]);
 				}

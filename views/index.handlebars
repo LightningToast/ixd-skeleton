@@ -82,13 +82,13 @@ ga('send', 'pageview');
       {{hour}}
     </div>
     <div id="{{hour}}.25" class="subTimeMarker" style="top:{{top15}}" ondrop="drop(event)" ondragover="allowDrop(event)">
-      15
+      :15
     </div>
     <div id="{{hour}}.5" class="subTimeMarker" style="top:{{top30}}"  ondrop="drop(event)" ondragover="allowDrop(event)">
-      30
+      :30
     </div>
     <div id="{{hour}}.75" class="subTimeMarker" style="top:{{top45}}"  ondrop="drop(event)" ondragover="allowDrop(event)">
-      45
+      :45
     </div>
   {{/each}}
 </div>
@@ -101,17 +101,17 @@ ga('send', 'pageview');
   {{/each}} 
   
 	<div class="header" align="center">
-		<h3><font color="white">Today</font></h3>
+		<h3><font color=#414141>Today</font></h3>
 		<button type="button" class="btn btn-sm btn-back" style="position: absolute; left:10px; top:0;">
 			<!--<i class="material-icons">user</i>-->
      		<a href="profile"><span class="glyphicon glyphicon-user"></span>	</a>
  		</button>
     {{#if indexB}}
-      <button type="button" class="btn btn-sm" style="position: absolute; right:10px; top:0;">
+      <button type="button" class="btn btn-sm" style="position: absolute; right:0px; top:0;">
         <a href="taskB"><span class="glyphicon glyphicon-plus"></span>  </a>
       </button>
     {{else}}
-      <button type="button" class="btn btn-sm btn-back btn-next" style="position: absolute; right:10px; top:0;">
+      <button type="button" class="btn btn-sm btn-back btn-next" style="position: absolute; right:0px; top:0;">
         <span class="glyphicon glyphicon-plus"></span>  </a> 
       </button>
     {{/if}} 

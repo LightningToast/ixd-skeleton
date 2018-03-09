@@ -96,7 +96,8 @@ function changeTime(ev) {
 	
 }
 function modifyTask(result) {
-	//console.log(result);
+	console.log("Callback");
+	console.log(result);
 }
 function rescheduleTask(result) {
 	console.log("reschedule Task Complete");

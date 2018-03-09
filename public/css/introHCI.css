@@ -14,11 +14,11 @@
 	right:0;
 	width: 90%;
 	margin-left: auto;
-    background-color: #414141;
+    background-color: #056571;
     text-align: center;
     padding: 2px;
-    border: 2px solid #302e2e;
-    border-radius: 10px;
+    border: 2px solid #065660;
+    border-radius: 5px;
 }
 .appointment {
 	position: absolute;
@@ -29,7 +29,7 @@
     text-align: center;
     padding: 2px;
     border: 2px solid #e55042;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .indicatorLineTask {
 	position: absolute;
@@ -59,12 +59,12 @@
 	height: 40%;
 	top: 0;
 	z-index: 10;
-	background-color: #056571;
+	background-color: #F8F4E3;
 	border: 2px solid ##525354;
 }
 .timeMarker {
 	position: absolute;
-	color: #ffffff;
+	color: #414141;
     left: 5px;
     width: 100%;
 }
@@ -105,12 +105,12 @@ h1, h2, h3, h5 {
 }
 
 h4 {
-	color: white;
+	color: #F8F4E3;
 	font-family: Georgia, Burford, Arial, Helvetica, sans-serif;
 }
 
 body {
-	background-color: #056571;
+	background-color: #F8F4E3;
 	font-family: Georgia, Burford, Arial, Helvetica, sans-serif;
 }
 
