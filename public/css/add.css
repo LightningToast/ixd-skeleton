@@ -33,16 +33,19 @@ h1 {
 
 .btn-back {
   margin-top: 10px;
-  background-color: #FF6A5C;
+  background-color: #E0E0E0;
+  border: 1px solid #BDBDBD;
 }
+
 
 a {
   color: #ffffff;
 }
 
 body {
-  background-color: #056571;
-  font-family: Georgia, Burford, Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  font-size: 18px;
+  font-family: Montserrat,Georgia, Burford, Arial, Helvetica, sans-serif;
 }
 
 .sub 

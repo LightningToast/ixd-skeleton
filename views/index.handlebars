@@ -113,16 +113,16 @@ ga('send', 'pageview');
   
 	<div class="header" align="center">
 		<h3><font color=#414141;>Today</font></h3>
-		<button type="button" class="btn btn-sm btn-back" style="position: absolute; left:10px; top:0;">
+		<button type="button" class="btn btn-sm btn-back" style="position: absolute; left:10px; top:0; border: 1px solid #BDBDBD;">
 			<!--<i class="material-icons">user</i>-->
      		<a href="profile"><span class="glyphicon glyphicon-user"></span>	</a>
  		</button>
     {{#if indexB}}
-      <button type="button" class="btn btn-sm" style="position: absolute; right:8px; top:0;">
+      <button type="button" class="btn btn-sm" style="position: absolute; right:8px; top:0; border: 1px solid #BDBDBD;">
         <a href="taskB"><span class="glyphicon glyphicon-plus"></span>  </a>
       </button>
     {{else}}
-      <button type="button" class="btn btn-sm btn-back btn-next" style="position: absolute; right:8px; top:0;">
+      <button type="button" class="btn btn-sm btn-back btn-next" style="position: absolute; right:8px; top:0; border: 1px solid #BDBDBD;">
         <span class="glyphicon glyphicon-plus"></span>  </a> 
       </button>
     {{/if}} 
@@ -157,21 +157,17 @@ ga('send', 'pageview');
 	</div>
 
 
-  <div class="container addPrompt">
-
-	
-
 	<div class="container addPrompt">
-    <h1 class="title"><font color="white">Task</font></h1>
+    <h1 class="title"><font color="#000000">Task</font></h1>
   <form id-"eventInput">
       <div class="form-group row">
-        <label for="title" class="col-sm-2 col-form-label"><font color="white">Title</font></label>
+        <label for="title" class="col-sm-2 col-form-label"><font face="Montserrat" color="#000000">Title</font></label>
         <div class="col-sm-10">
           <input type="title" class="form-control" id="titleForm" placeholder="ex. Homework, Laundry, etc.">
         </div>
       </div>
       <div class="form-group row">
-        <label for="start" class="col-sm-2 col-form-label"><font color="white">Start By</font></label>
+        <label for="start" class="col-sm-2 col-form-label"><font face="Montserrat" color="#000000">Start By</font></label>
         <div class="col-sm-10">
           <input type="start" class="form-control timepicker" id="startForm">
         </div>
@@ -182,18 +178,30 @@ ga('send', 'pageview');
         </script>
      </div>
       <div class="form-group row sub">
-      <label for="duration" class="col-sm-2 col-form-label"><font color="white">Duration</font></label>
+      <label for="duration" class="col-sm-2 col-form-label"><font face="Montserrat" color="#000000">Duration</font></label>
       <div class="col-sm-10">     
       <select id="durationForm" class="form-control">
         <option>0.25 hr</option>
         <option>0.5 hr</option>
         <option>0.75 hr</option>
         <option>1 hr</option>
+        <option>1.25 hr</option>
+        <option>1.5 hr</option>
+        <option>1.75 hr</option>
+        <option>2 hr</option>
+        <option>2.25 hr</option>
+        <option>2.5 hr</option>
+        <option>2.75 hr</option>
+        <option>3 hr</option>
+        <option>3.25 hr</option>
+        <option>3.5 hr</option>
+        <option>3.75 hr</option>
+        <option>4 hr</option>
       </select>
       </div>
       </div>
     <div class="form-group row">
-    <label for="start" class="col-sm-2 col-form-label"><font color="white">Deadline</font></label>
+    <label for="start" class="col-sm-2 col-form-label"><font face="Montserrat" color="#000000">Deadline</font></label>
     <div class="col-sm-10">
       <input type="end" class="form-control timepicker" id="endAt">
     </div>
@@ -203,7 +211,7 @@ ga('send', 'pageview');
       });
     </script>
   </div>
-  <div class="form-group row">
+  <!--<div class="form-group row">
     <label for="priority" class="col-sm-2 col-form-label"><font color="white">Priority</font></label>
     <div class="col-sm-10">     
     <select id="priorityForm" class="form-control">
@@ -214,13 +222,14 @@ ga('send', 'pageview');
     </div>
   </div> 
 </form>
+-->
 <div class="buttonHolder">
 
 
-	<button id="AddSubmit" type="button" class="btn btn-primary btn-add gaClick">
+	<button id="AddSubmit" type="button" class="gaClick" style=" background-color: #E0E0E0;border: 1px solid #BDBDBD">
       <a href="/">Submit</a>
     </button>
-    <button type="button" class="btn btn-primary"><a href="/">Cancel</a></button>
+    <button type="button" class=""><a href="/">Cancel</a></button>
 </div>
 </div>
 

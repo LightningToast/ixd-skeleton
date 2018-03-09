@@ -53,12 +53,9 @@ function initializePage() {
 	});
 
 
-$('.gaClick').click(sendBtnClick);
-console.log("clicked");
 
-	function sendBtnClick(event){
-ga("send","event", 'submitClicked', 'click');
-}
+
+	
 
 	$("#AddSubmit").click(function(e){
 		console.log("adding task");
@@ -73,7 +70,12 @@ ga("send","event", 'submitClicked', 'click');
 		//$(".addPrompt").show();
 		//$(".loop").css("opacity", "0.3");
 	});
+	$('.gaClick').click(sendBtnClick);
+console.log("clicked");
 
+}
+function sendBtnClick(event){
+ga("send","event", 'submitClicked', 'click');
 }
 function projectClick(e) { 
     // prevent the page from reloading      
