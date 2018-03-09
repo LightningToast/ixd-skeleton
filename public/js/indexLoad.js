@@ -65,7 +65,7 @@ ga("send","event", 'submitClicked', 'click');
 		$.post("/", {"title": document.getElementById("titleForm").value,
 				"description": "",
 				"timeStart": document.getElementById("startForm").value,
-				"timeEnd": "5",
+				"timeEnd": document.getElementById("endAt").value,
 				"duration": document.getElementById("durationForm").value,
 				"class": "task",
 				"height": "80px",

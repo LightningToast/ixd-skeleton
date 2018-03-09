@@ -75,6 +75,31 @@ ga('send', 'pageview');
 	</script>
 </head>
 <body>
+
+  <div class="loop">
+  {{#each times}}
+    <div id="{{hour}}" class="timeMarker" style="top:{{topHour}}" ondrop="drop(event)" ondragover="allowDrop(event)">
+      {{hour}}
+    </div>
+    <div id="{{hour}}.25" class="subTimeMarker" style="top:{{top15}}" ondrop="drop(event)" ondragover="allowDrop(event)">
+      15
+    </div>
+    <div id="{{hour}}.5" class="subTimeMarker" style="top:{{top30}}"  ondrop="drop(event)" ondragover="allowDrop(event)">
+      30
+    </div>
+    <div id="{{hour}}.75" class="subTimeMarker" style="top:{{top45}}"  ondrop="drop(event)" ondragover="allowDrop(event)">
+      45
+    </div>
+  {{/each}}
+</div>
+  {{#each events}}
+    <div class={{class}} id={{title}} style="height: {{height}}; top:{{top}}" draggable="true" ondragstart="drag(event)">           
+      <h4>{{title}}</h4>
+
+    </div>
+
+  {{/each}} 
+  
 	<div class="header" align="center">
 		<h3><font color="white">Today</font></h3>
 		<button type="button" class="btn btn-sm btn-back" style="position: absolute; left:10px; top:0;">
@@ -82,62 +107,13 @@ ga('send', 'pageview');
      		<a href="profile"><span class="glyphicon glyphicon-user"></span>	</a>
  		</button>
     {{#if indexB}}
-             <button type="button" class="btn btn-sm" style="position: absolute; right:10px; top:0;">
-        <a href="taskB"><span class="glyphicon glyphicon-plus"></span>  </a></button>
-
-
-</div class="loop">
-  {{#each times}}
-    <div id="{{hour}}" class="timeMarker" style="top:{{topHour}}" ondrop="drop(event)" ondragover="allowDrop(event)">
-      {{hour}}
-    </div>
-    <div id="{{hour}}.25" class="subTimeMarker" style="top:{{top15}}" ondrop="drop(event)" ondragover="allowDrop(event)">
-      15
-    </div>
-    <div id="{{hour}}.5" class="subTimeMarker" style="top:{{top30}}"  ondrop="drop(event)" ondragover="allowDrop(event)">
-      30
-    </div>
-    <div id="{{hour}}.75" class="subTimeMarker" style="top:{{top45}}"  ondrop="drop(event)" ondragover="allowDrop(event)">
-      45
-    </div>
-  {{/each}}
-  {{#each events}}
-        <div class={{class}} id={{title}} style="height: {{height}}; top:{{top}}" draggable="true" ondragstart="drag(event)">           
-        <h4>{{title}}</h4>
-
-      </div>
-
-    {{/each}} 
-
+      <button type="button" class="btn btn-sm" style="position: absolute; right:10px; top:0;">
+        <a href="taskB"><span class="glyphicon glyphicon-plus"></span>  </a>
+      </button>
     {{else}}
-    <button type="button" class="btn btn-sm btn-back btn-next" style="position: absolute; right:10px; top:0;">
+      <button type="button" class="btn btn-sm btn-back btn-next" style="position: absolute; right:10px; top:0;">
         <span class="glyphicon glyphicon-plus"></span>  </a> 
-    </button>
-
-
-    </div class="loop">
-  {{#each times}}
-    <div id="{{hour}}" class="timeMarker" style="top:{{topHour}}" ondrop="drop(event)" ondragover="allowDrop(event)">
-      {{hour}}
-    </div>
-    <div id="{{hour}}.25" class="subTimeMarker" style="top:{{top15}}" ondrop="drop(event)" ondragover="allowDrop(event)">
-      15
-    </div>
-    <div id="{{hour}}.5" class="subTimeMarker" style="top:{{top30}}"  ondrop="drop(event)" ondragover="allowDrop(event)">
-      30
-    </div>
-    <div id="{{hour}}.75" class="subTimeMarker" style="top:{{top45}}"  ondrop="drop(event)" ondragover="allowDrop(event)">
-      45
-    </div>
-  {{/each}}
-  {{#each events}}
-        <div class={{class}} id={{title}} style="height: {{height}}; top:{{top}}" draggable="true" ondragstart="drag(event)">           
-        <h4>{{title}}</h4>
-
-      </div>
-
-    {{/each}} 
-
+      </button>
     {{/if}} 
 	</div>
 
@@ -151,7 +127,7 @@ ga('send', 'pageview');
       
       		<a href="signOut">Log In!</a>
     
-  		</button>
+  	</button>
 	</div>
 	<div id="reschedulePopup" class="reschedulePrompt">
 		<h3>
@@ -161,6 +137,7 @@ ga('send', 'pageview');
       	<h2>
       		Start
 		</h2>
+    </button>
 		<button id="rescheduleConfirmButton" type="button" class="btn btn-default btn-sm btn-back btn-re">
       	<h2>
       		Later
@@ -229,38 +206,19 @@ ga('send', 'pageview');
 <div class="buttonHolder">
 
   <button id="myelement" type="button" class="btn btn-primary btn-add">
+  </button>
 
 	<button id="AddSubmit" type="button" class="btn btn-primary btn-add gaClick">
 
       <a href="/">Submit</a>
     </button>
 </div>
+</div>
 
 
 
 
-</div class="loop">
-  {{#each times}}
-    <div id="{{hour}}" class="timeMarker" style="top:{{topHour}}" ondrop="drop(event)" ondragover="allowDrop(event)">
-      {{hour}}
-    </div>
-    <div id="{{hour}}.25" class="subTimeMarker" style="top:{{top15}}" ondrop="drop(event)" ondragover="allowDrop(event)">
-      15
-    </div>
-    <div id="{{hour}}.5" class="subTimeMarker" style="top:{{top30}}"  ondrop="drop(event)" ondragover="allowDrop(event)">
-      30
-    </div>
-    <div id="{{hour}}.75" class="subTimeMarker" style="top:{{top45}}"  ondrop="drop(event)" ondragover="allowDrop(event)">
-      45
-    </div>
-  {{/each}}
-  {{#each events}}
-        <div class={{class}} id={{title}} style="height: {{height}}; top:{{top}}" draggable="true" ondragstart="drag(event)">           
-        <h4>{{title}}</h4>
 
-      </div>
-
-    {{/each}} 
 
 
 

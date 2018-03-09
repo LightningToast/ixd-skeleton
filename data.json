@@ -98,11 +98,13 @@
 			"title": "Lunch",
 			"description": "",
 			"timeStart": "0",
-			"timeEnd": "1",
+			"timeEnd": "3",
 			"duration": "1",
 			"class": "appointment",
 			"height": "40px",
-			"top": "60px"
+			"top": "60px",
+			"start": "0",
+			"end": "1"
 		},
 		{
 			"title": "Studio",
@@ -112,27 +114,33 @@
 			"duration": "1",
 			"class": "appointment",
 			"height": "80px",
-			"top": "140px"
+			"top": "140px",
+			"start": "1",
+			"end": "2"
 		},
 		{
 			"title": "Homework",
 			"description": "COGS 120 Homework",
-			"timeStart": "2",
-			"timeEnd": "4",
+			"timeStart": "0",
+			"timeEnd": "12",
 			"duration": "1",
 			"class": "task",
 			"height": "160px",
-			"top": "220px"
+			"top": "220px",
+			"start": "2",
+			"end": "4"
 		},
 		{
 			"title": "Laundry",
 			"description": "Wash your clothes",
-			"timeStart": "7",
-			"timeEnd": "8",
+			"timeStart": "6",
+			"timeEnd": "9",
 			"duration": "1",
 			"class": "task",
 			"height": "80px",
-			"top": "620px"
+			"top": "620px",
+			"start": "7",
+			"end": "8"
 		}
 	],
 	"newEvent": [
