@@ -42,9 +42,13 @@ ga('send', 'pageview');
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
 	<link href="/css/introHCI.css" rel="stylesheet">
 	<!--<link href="/css/signin.css" rel="stylesheet">-->
 	<script src="/js/indexLoad.js"></script>
+  <script src="/js/DragDropTouch.js"></script>
 	<style>
 	#div1 {
 	    width: 350px;
@@ -60,7 +64,8 @@ ga('send', 'pageview');
 	}
 
 	function drag(ev) {
-    	ev.dataTransfer.setData("text", ev.target.id);
+    
+    ev.dataTransfer.setData("text", ev.target.id);
 	}
 
 	function drop(ev) {
@@ -92,26 +97,32 @@ ga('send', 'pageview');
     </div>
   {{/each}}
 </div>
+
+<div class="vl">
+</div>
+
   {{#each events}}
-    <div class={{class}} id={{title}} style="height: {{height}}; top:{{top}}" draggable="true" ondragstart="drag(event)">           
-      <h4>{{title}}</h4>
+    <div class={{class}} id={{title}} style="height: {{height}}; top:{{top}}; text-align: center;" draggable="true" ondragstart="drag(event)">   
+      <div style="position: relative; top: 50%; transform: translateY(-100%);"> 
+        <h4>{{title}}</h4>
+      </div>
 
     </div>
 
   {{/each}} 
   
 	<div class="header" align="center">
-		<h3><font color=#414141>Today</font></h3>
+		<h3><font color=#414141;>Today</font></h3>
 		<button type="button" class="btn btn-sm btn-back" style="position: absolute; left:10px; top:0;">
 			<!--<i class="material-icons">user</i>-->
      		<a href="profile"><span class="glyphicon glyphicon-user"></span>	</a>
  		</button>
     {{#if indexB}}
-      <button type="button" class="btn btn-sm" style="position: absolute; right:0px; top:0;">
+      <button type="button" class="btn btn-sm" style="position: absolute; right:8px; top:0;">
         <a href="taskB"><span class="glyphicon glyphicon-plus"></span>  </a>
       </button>
     {{else}}
-      <button type="button" class="btn btn-sm btn-back btn-next" style="position: absolute; right:0px; top:0;">
+      <button type="button" class="btn btn-sm btn-back btn-next" style="position: absolute; right:8px; top:0;">
         <span class="glyphicon glyphicon-plus"></span>  </a> 
       </button>
     {{/if}} 

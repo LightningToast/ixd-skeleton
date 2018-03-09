@@ -1,25 +1,26 @@
 
 h1 {
   text-align: center;
-  font-size: 36px;
+  font-size: 20px;
   margin-bottom: 20px;
   margin-top: 0px;
-  font-family: Georgia, Burford, Arial, Helvetica, sans-serif;
-  color:white;
+  font-family: Montserrat,Georgia, Burford, Arial, Helvetica, sans-serif;
+  color:#000000;
 }
 
 h3 {
 	text-align: center;
-	font-size: 24px;
+	font-size: 18px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	font-family: Comic Sans MS, Burford, Arial, Helvetica, sans-serif;
-	color: white;
+	font-family: Montserrat,Georgia, Burford, Arial, Helvetica, sans-serif;
+	color: #000000;
 }
 
 body {
-	background-color: #056571;
-	font-family: Georgia, Burford, Arial, Helvetica, sans-serif;
+	background-color: #ffffff;
+	font-size: 18px;
+	font-family: Montserrat,Georgia, Burford, Arial, Helvetica, sans-serif;
 }
 
 .buttonHolder {
@@ -29,7 +30,8 @@ body {
 
 .btn-back {
   margin-top: 10px;
-  background-color: #FF6A5C;
+  background-color: #E0E0E0;
+  border: 1px solid #BDBDBD;
 }
 
 a {
@@ -44,7 +46,7 @@ img {
 
 .imgHolder {
 	text-align: center;
-	border-color: white;
+	border-color: #000000;
 }
 
 .btn-signOut {

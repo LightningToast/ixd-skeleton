@@ -1,3 +1,21 @@
+/* Keyword values */
+touch-action: auto;
+touch-action: none;
+touch-action: pan-x;
+touch-action: pan-left;
+touch-action: pan-right;
+touch-action: pan-y;
+touch-action: pan-up;
+touch-action: pan-down;
+touch-action: pinch-zoom;
+touch-action: manipulation;
+
+/* Global values */
+touch-action: inherit;
+touch-action: initial;
+touch-action: unset;
+
+
 /* applies to anything of class "example-class-selector" */
 .example-class-selector {
 	margin-top: 2em;
@@ -11,25 +29,27 @@
 .task {
 	position: absolute;
 	text-decoration-color: #ffffff;
-	right:0;
-	width: 90%;
+	right:10%;
+	width: 80%;
 	margin-left: auto;
-    background-color: #056571;
-    text-align: center;
+    background-color: #ef9e9e;
     padding: 2px;
-    border: 2px solid #065660;
+    border: 2px solid #EB5757;
     border-radius: 5px;
+    touch-action: none;
+
 }
 .appointment {
 	position: absolute;
-	right:0;
-	width: 90%;
+	right:10%;
+	width: 80%;
 	margin-left: auto;
-    background-color: #FF6A5C;
+    background-color: #efc097;
     text-align: center;
     padding: 2px;
-    border: 2px solid #e55042;
+    border: 2px solid #F2994A;
     border-radius: 5px;
+    touch-action: none;
 }
 .indicatorLineTask {
 	position: absolute;
@@ -53,13 +73,24 @@
 
 }
 
+.vl {
+    border-left: 1px;
+    border: 1px solid #c6c6c6;
+    height: 152%;
+    position: absolute;
+    left: 8%;
+    margin-left: -3px;
+    top: 10;
+}
+
 .header {
 	text-align: center;
 	position: sticky;
 	height: 40%;
 	top: 0;
 	z-index: 10;
-	background-color: #F8F4E3;
+
+	background-color: #ffffff;
 	border: 2px solid ##525354;
 }
 .timeMarker {
@@ -67,12 +98,16 @@
 	color: #414141;
     left: 5px;
     width: 100%;
+    font-size: 12px;
+    font-family: Montserrat, Arial, Georgia, Burford, Arial, Helvetica, sans-serif;
 }
 .subTimeMarker {
 	position: absolute;
     color: #b2b0b0;
-    left: 10px;
+    left: 5px;
     width: 100%;
+    font-size: 12px;
+    font-family: Montserrat, Arial, Georgia, Burford, Arial, Helvetica, sans-serif;
 }
 .loginPrompt {
 	text-align: center;
@@ -100,17 +135,19 @@
 }
 
 h1, h2, h3, h5 {
-	color: #353638;
-	font-family: Georgia, Burford, Arial, Helvetica;
+	color: #000000;
+	font-size: 20px;
+	font-family: Montserrat, Arial, Georgia, Burford, Arial, Helvetica;
 }
 
 h4 {
-	color: #F8F4E3;
-	font-family: Georgia, Burford, Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: 18px;
+	font-family: Montserrat, Arial, Georgia, Burford, Arial, Helvetica, sans-serif;
 }
 
 body {
-	background-color: #F8F4E3;
+	background-color: #ffffff;
 	font-family: Georgia, Burford, Arial, Helvetica, sans-serif;
 }
 
