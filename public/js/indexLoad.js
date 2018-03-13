@@ -52,12 +52,7 @@ function initializePage() {
 		//$(".loop").css("opacity", "0.3");
 	});
 
-
-
-
-	
-
-	$("#AddSubmit").click(function(e){
+$("#AddSubmit").click(function(e){
 		console.log("adding task");
 		$.post("/", {"title": document.getElementById("titleForm").value,
 				"description": "",
@@ -70,12 +65,15 @@ function initializePage() {
 		//$(".addPrompt").show();
 		//$(".loop").css("opacity", "0.3");
 	});
-	$('.gaClick').click(sendBtnClick);
+$('.gaClick').click(sendBtnClick);
 console.log("clicked");
 
-}
-function sendBtnClick(event){
+	function sendBtnClick(event){
 ga("send","event", 'submitClicked', 'click');
+}
+
+	
+
 }
 function projectClick(e) { 
     // prevent the page from reloading      

@@ -187,10 +187,10 @@ function checkTime(pos, start, end) {
 			} else if((start <= data.events[event].start)&&(end >= data.events[event].end)) {
 				console.log("Time block encompasses data " + data.events[event].start + " - " + data.events[event].end);
 				valid = false;
-			} else if((start <= data.events[event].start)&&(end > data.events[event].start)) {
+			} else if((start <= data.events[event].start)&&(end >= data.events[event].start)) {
 				console.log("End overlaps " + data.events[event].start + " - " + data.events[event].end);
 				valid = false;
-			} else if((start < data.events[event].end)&&(end >= data.events[event].end)) {
+			} else if((start <= data.events[event].end)&&(end >= data.events[event].end)) {
 				console.log("Start overlaps " + data.events[event].start + " - " + data.events[event].end);
 				valid = false;
 			}
