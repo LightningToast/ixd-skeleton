@@ -51,6 +51,19 @@ touch-action: unset;
     border-radius: 5px;
     touch-action: none;
 }
+.eventMarker {
+	position: absolute;
+	right:8%;
+	width: 84%;
+	margin-left: auto;
+    background-color: #8FC0A9;
+    text-align: center;
+    padding: 2px;
+    border: 2px solid #0e9355;
+    border-radius: 5px;
+    touch-action: none;
+    z-index: -1;
+}
 .indicatorLineTask {
 	position: absolute;
 	height:5px;
@@ -167,8 +180,8 @@ button {
 }
 
 .addPrompt {
-	background-color: #8FC0A9;
-	border: 2px solid #0e9355;
+	background-color: #8fc0d3;
+	border: 2px solid #073c50;
 	z-index: 12;
 	position: fixed;
 	top:15%;

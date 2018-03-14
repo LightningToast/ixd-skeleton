@@ -13,6 +13,7 @@ function initializePage() {
 	//console.log(document.getElementById("startForm").value);
 	$(".reschedulePrompt").hide();
 	$(".addPrompt").hide();
+	$(".eventMarker").hide();
 	$("#rescheduleBeginButton").click(function(e) {
 		$(".reschedulePrompt").hide();
 	});

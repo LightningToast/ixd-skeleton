@@ -58,16 +58,30 @@ ga('send', 'pageview');
 	}
 	</style>
 	<script>
-	
+	document.addEventListener("dragend", function( event ) {
+      // reset the transparency
+      $(".eventMarker").hide();
+  }, false);
 	function allowDrop(ev) {
     	ev.preventDefault();
+      
 	}
-
+  function mouseUp() {
+    //document.getElementById("myP").style.color = "green";
+    $(".eventMarker").hide();
+  }
 	function drag(ev) {
     
     ev.dataTransfer.setData("text", ev.target.id);
+    var data = ev.dataTransfer.getData("text");
+    document.getElementById(data+"Marker").style.display = "block";
 	}
-
+  function dragend(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      document.getElementById(data+"Marker").style.display = "none";
+      //ev.target.appendChild(document.getElementById(data));
+  }
 	function drop(ev) {
     	ev.preventDefault();
     	var data = ev.dataTransfer.getData("text");
@@ -75,6 +89,8 @@ ga('send', 'pageview');
     	//console.log({{events}});
     	//data.events[]
     	document.getElementById(data).style.top = ev.target.style.top;
+      console.log("Data of drop " + data);
+      document.getElementById(data+"Marker").style.display = "none";
     	//ev.target.appendChild(document.getElementById(data));
 	}
 	</script>
@@ -102,7 +118,14 @@ ga('send', 'pageview');
 </div>
 
   {{#each events}}
-    <div class={{class}} id={{title}} style="height: {{height}}; top:{{top}}; text-align: center;" draggable="true" ondragstart="drag(event)">   
+    <div class="eventMarker" id={{timeTitle}} style="height:{{timeDuration}}; top:{{timeTop}}; text-align: center;>   
+      <div style="position: relative; top: 50%; transform: translateY(-100%);"> 
+        
+      </div>
+
+    </div>
+
+    <div class={{class}} id={{title}} style="height: {{height}}; top:{{top}}; text-align: center;" draggable="true" ondragstart="drag(event)" onmouseup="mouseUp()">   
       <div style="position: relative; top: 50%; transform: translateY(-100%);"> 
         <h4>{{title}}</h4>
       </div>
