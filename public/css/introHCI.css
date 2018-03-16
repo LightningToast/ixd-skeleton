@@ -147,6 +147,20 @@ touch-action: unset;
 	border-radius: 5px;
 	font-family: Montserrat, Georgia, Burford, Arial, Helvetica, sans-serif;
 }
+.deletePrompt {
+	text-align: center;
+	position: fixed;
+	right: 8%;
+	top: 35%;
+	z-index: 100;
+    width: 84%;
+    height: 30%;
+	background-color: #994646;
+	border: 2px solid #600101;
+	font-size: 12px;
+	border-radius: 5px;
+	font-family: Montserrat, Georgia, Burford, Arial, Helvetica, sans-serif;
+}
 .errorPrompt {
 	text-align: center;
 	position: fixed;
@@ -214,10 +228,10 @@ button {
 	border: 2px solid #52115b;
 	z-index: 12;
 	position: fixed;
-	top:15%;
+	top:10%;
 	left:5%;
 	width: 90%;
-	height: 70%;
+	height: 80%;
 	border-radius: 5px;
 }
 

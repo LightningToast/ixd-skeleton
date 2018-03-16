@@ -205,6 +205,24 @@ ga('send', 'pageview');
     </h2>
   </div>
 
+    <div id="deletePopup" class="deletePrompt">
+      <h3 id="deleteTitle" class="reminder"> 
+       Delete?
+      </h3>
+    <button id="deleteConfirmButton" type="button" class="btn btn-default btn-sm btn-back btn-re">
+        <a href="/">
+        <h2>
+          Yes, Delete
+        </h2>
+      </a>
+    </button>
+    <button id="deleteCancelButton" type="button" class="btn btn-default btn-sm btn-back btn-re">
+        <h2>
+          No, Cancel
+    </h2>       
+      </button>
+  </div>
+
 
 	<div class="container addPrompt">
     <h1 class="title"><font color="#000000">Task</font></h1>
@@ -346,7 +364,10 @@ ga('send', 'pageview');
 -->
 <div class="buttonHolder">
 	<button id="ModifySubmit" type="button" class="btn-add"><a href="/">Submit</a></button>
+
   <button type="button" class="btn-add"><a href="/">Cancel</a></button>
+
+  <button id="DeleteSubmit" type="button" class="btn-add">Delete</button>
 </div>
 </div>
 

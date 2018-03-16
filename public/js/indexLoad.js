@@ -23,6 +23,7 @@ function initializePage() {
 	$(".addPrompt").hide();
 	$(".modifyPrompt").hide();
 	$(".eventMarker").hide();
+	$(".deletePrompt").hide();
 
 	$("#rescheduleBeginButton").click(function(e) {
 		$(".reschedulePrompt").hide();
@@ -144,6 +145,36 @@ function initializePage() {
   		console.log("Recieved data json");	
   		modifyTask = "";	
 	});
+		//$(".addPrompt").show();
+		//$(".loop").css("opacity", "0.3");
+	});
+	$("#deleteConfirmButton").click(function(e){
+		console.log("deleting task");
+		$.post("/delete", {"deleteTask": modifyTask}, addTask);
+		$.get("/getData", function(data){
+			currentData = data;
+  			console.log("Recieved data json");	
+  			modifyTask = "";	
+		});
+		//$(".addPrompt").show();
+		//$(".loop").css("opacity", "0.3");
+	});
+	$("#deleteCancelButton").click(function(e){
+		console.log("delete cancel task");
+		$(".deletePrompt").hide();
+		$(".modifyPrompt").hide();
+		modifyTask = "";
+		$.get("/getData", function(data){
+			currentData = data;
+  			console.log("Recieved data json");	
+  			modifyTask = "";	
+		});
+		//$(".addPrompt").show();
+		//$(".loop").css("opacity", "0.3");
+	});
+	$("#DeleteSubmit").click(function(e){
+		console.log("deleting task");
+		$(".deletePrompt").show();
 		//$(".addPrompt").show();
 		//$(".loop").css("opacity", "0.3");
 	});

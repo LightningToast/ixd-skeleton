@@ -52,6 +52,7 @@ app.get('/signOut', signOut.view);
 app.get('/task', task.view);
 app.post('/', index.setData);
 app.post('/modify', index.modifyData);
+app.post('/delete', index.delete);
 app.get('/getData', index.getData);
 app.get("/taskb",taskB.view )
 app.get('/indexB', index.indexB);

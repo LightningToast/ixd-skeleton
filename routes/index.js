@@ -23,6 +23,26 @@ exports.indexB = function(req, res){
   	res.render('index', data);
   	
 };
+exports.delete = function(req, res){
+	//console.log(res);
+  	var dataPos = -1;
+	for(event in data.events) {
+			
+		if(data.events[event].title == req.body.deleteTask) {
+			dataPos = event;
+		}	
+	}
+	//delete data[dataPos];
+	console.log("Deleting task: " + data.events[dataPos].title);
+  	//delete data.events[dataPos];\
+  	data.events[dataPos].start = -1;
+  	data.events[dataPos].end = -1;
+  	data.events[dataPos].title = "";
+  	data.events[dataPos].top = 0;
+  	data.events[dataPos].height = 0;
+  	res.render('index', data);
+  	
+};
 exports.setData = function (req, res) {
 	console.log("setData");
 	if(req.body.modifyTask != 'true') {
