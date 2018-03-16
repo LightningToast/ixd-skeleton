@@ -237,7 +237,7 @@ function rescheduleTask(req) {
 	console.log("Data pos is " + dataPos);
 	if(dataPos != -1) {
 		console.log("Time to check " + parseFloat(data.events[dataPos].start) + " - " + data.events[dataPos].timeEnd);
-		for(var count = parseFloat(data.events[dataPos].start); count < parseFloat(data.events[dataPos].timeEnd); count += 0.25) {
+		for(var count = parseFloat(data.events[dataPos].start) + 0.25; count < parseFloat(data.events[dataPos].timeEnd); count += 0.25) {
 			var start = count;
 			var end = count + parseFloat(data.events[dataPos].duration);
 			console.log("Time to check " + start + " - " + end);
