@@ -141,8 +141,8 @@ touch-action: unset;
 	z-index: 11;
     width: 84%;
     height: 30%;
-	background-color: #f9f1c5;
-	border: 2px solid #f2d42e;
+	background-color: #f2df76;
+	border: 2px solid #ccac00;
 	font-size: 12px;
 	border-radius: 5px;
 	font-family: Montserrat, Georgia, Burford, Arial, Helvetica, sans-serif;
@@ -206,6 +206,18 @@ button {
 .addPrompt {
 	background-color: #8fc0d3;
 	border: 2px solid #073c50;
+	z-index: 12;
+	position: fixed;
+	top:15%;
+	left:5%;
+	width: 90%;
+	height: 70%;
+	border-radius: 5px;
+}
+
+.modifyPrompt {
+	background-color: #d5c0d8;
+	border: 2px solid #52115b;
 	z-index: 12;
 	position: fixed;
 	top:15%;

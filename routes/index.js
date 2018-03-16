@@ -47,6 +47,62 @@ exports.setData = function (req, res) {
 	}
 	res.render('index', data);
 }
+exports.modifyData = function (req, res) {
+	console.log("modifyData");
+	console.log(req.body);
+	var dataPos = -1;
+	for(event in data.events) {
+			
+		if(data.events[event].title == req.body.oldTitle) {
+			dataPos = event;
+		}	
+	}
+	console.log("DataPos " + dataPos);
+	var timeStartConv = parseTime(req.body.timeStart);
+	var timeEndConv = parseTime(req.body.timeEnd);
+
+	var height = initialHeightBuffer * parseInt(req.body.duration);
+	
+	var end = timeEndConv;
+	var start = timeStartConv;
+	var dur = parseFloat(req.body.duration);
+	var classType = "task";
+	console.log("end-start=duration " + end + "-" + start + "=" + dur);
+	if(dur == (end - start)) {
+		classType = "appointment";
+		console.log("This is an appointment");
+	} else {
+		console.log("Not an appointment");
+	}
+
+	var timeToStart = findTime(req, timeStartConv, timeEndConv);
+	var timeToEnd = timeToStart + parseFloat(req.body.duration);
+
+	var top = hourHeight + initialHeightBuffer * timeToStart;
+
+	var timeTop = hourHeight + initialHeightBuffer * timeStartConv;
+	var timeDuration = initialHeightBuffer * (timeEndConv - timeStartConv);
+
+	console.log(top);
+
+	
+
+		data.events[dataPos].title = req.body.title,
+		data.events[dataPos].timeTitle = req.body.title+"Marker",
+		data.events[dataPos].timeStart = timeStartConv,
+		data.events[dataPos].timeEnd = timeEndConv,
+		data.events[dataPos].timeTop =  timeTop+"px",
+		data.events[dataPos].timeDuration =  timeDuration+"px",
+		data.events[dataPos].duration = req.body.duration,
+		data.events[dataPos].classType = classType,
+		data.events[dataPos].height = height+"px",
+		data.events[dataPos].top = top+"px", 
+		data.events[dataPos].start = timeToStart,
+		data.events[dataPos].end = timeToEnd
+
+		console.log("Return: "+ data.events[dataPos].duration);
+	res.render('index', data);
+}
 function addTask(req) {
 	console.log("SET DATA");
 	console.log(req.body);
@@ -127,7 +183,7 @@ function findTime(req, timeStart, timeEnd) {
 	
 	console.log("Time to check " + timeStart + " - " + timeEnd);
 	var startTime = timeStart;
-	for(var count = timeStart + 0.25; count < timeEnd; count += 0.25) {
+	for(var count = timeStart; count < timeEnd; count += 0.25) {
 		var start = count;
 		var end = count + parseFloat(req.body.duration);
 		console.log();
@@ -161,7 +217,7 @@ function rescheduleTask(req) {
 	console.log("Data pos is " + dataPos);
 	if(dataPos != -1) {
 		console.log("Time to check " + parseFloat(data.events[dataPos].start) + " - " + data.events[dataPos].timeEnd);
-		for(var count = parseFloat(data.events[dataPos].start) + 0.25; count < parseFloat(data.events[dataPos].timeEnd); count += 0.25) {
+		for(var count = parseFloat(data.events[dataPos].start); count < parseFloat(data.events[dataPos].timeEnd); count += 0.25) {
 			var start = count;
 			var end = count + parseFloat(data.events[dataPos].duration);
 			console.log("Time to check " + start + " - " + end);
@@ -190,19 +246,19 @@ function checkTime(pos, start, end) {
 				
 		if(event != pos) {
 			if((end > data.events[event].start)&&(end < data.events[event].end)) {
-				console.log("End is between start and end " + data.events[event].start + " - " + data.events[event].end);
+				console.log(data.events[event].title + " End is between start and end " + data.events[event].start + " - " + data.events[event].end);
 				valid = false;
 			} else if((start > data.events[event].start)&&(start < data.events[event].end)) {
-				console.log("Start is between start and end " + data.events[event].start + " - " + data.events[event].end);
+				console.log(data.events[event].title + " Start is between start and end " + data.events[event].start + " - " + data.events[event].end);
 				valid = false;
 			} else if((start <= data.events[event].start)&&(end >= data.events[event].end)) {
-				console.log("Time block encompasses data " + data.events[event].start + " - " + data.events[event].end);
+				console.log(data.events[event].title + " Time block encompasses data " + data.events[event].start + " - " + data.events[event].end);
 				valid = false;
 			} else if((start < data.events[event].start)&&(end > data.events[event].start)) {
-				console.log("End overlaps " + data.events[event].start + " - " + data.events[event].end);
+				console.log(data.events[event].title + " End overlaps " + data.events[event].start + " - " + data.events[event].end);
 				valid = false;
 			} else if((start < data.events[event].end)&&(end > data.events[event].end)) {
-				console.log("Start overlaps " + data.events[event].start + " - " + data.events[event].end);
+				console.log(data.events[event].title + " Start overlaps " + data.events[event].start + " - " + data.events[event].end);
 				valid = false;
 			}
 		}
