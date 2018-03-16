@@ -92,15 +92,15 @@
 			"description": "",
 			"timeTitle": "LunchMarker",
 			"timeStart": "0",
-			"timeEnd": "3",
+			"timeEnd": "0.5",
 			"timeTop": "60px",
-			"timeDuration": "240px",
+			"timeDuration": "40px",
 			"duration": "0.5",
 			"class": "appointment",
 			"height": "40px",
 			"top": "60px",
 			"start": "0",
-			"end": "1"
+			"end": "0.5"
 		},
 		{
 			"title": "Studio",
