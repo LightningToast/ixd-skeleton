@@ -160,17 +160,11 @@ h4 {
 	font-family: Montserrat, Arial, Georgia, Burford, Arial, Helvetica, sans-serif;
 }
 
-body {
-	background-color: #ffffff;
-	font-family: Montserrat,Georgia, Burford, Arial, Helvetica, sans-serif;
-}
-
 button {
     background-color: #E0E0E0;
     border: 1px solid #BDBDBD;
     border-radius: 5px;
     font-family: Montserrat,Georgia, Burford, Arial, Helvetica, sans-serif;
-
 }
 
 .btn-re {
@@ -218,5 +212,26 @@ button {
 	border: 1px solid #BDBDBD;
 	height: 50px;
 	width: 120px;
+}
 
+body {
+	background-color: #ffffff;
+	font-family: Montserrat, Arial, Georgia, Burford, Arial, Helvetica, sans-serif;
+}
+
+.form-heading {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.btn-block {
+	font-family: Montserrat,Georgia, Burford, Arial, Helvetica, sans-serif;
+}
+
+.form-control {
+	margin-bottom: 10px;
+}
+
+.facebookLogin {
+	margin-top: 10px;
 }
