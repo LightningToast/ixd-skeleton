@@ -51,6 +51,7 @@ app.get('/schedule', schedule.view);
 app.get('/signOut', signOut.view);
 app.get('/task', task.view);
 app.post('/', index.setData);
+app.get('/getData', index.getData);
 app.get("/taskb",taskB.view )
 app.get('/indexB', index.indexB);
 // Example route

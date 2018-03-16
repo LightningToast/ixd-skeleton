@@ -85,12 +85,20 @@ ga('send', 'pageview');
 	function drop(ev) {
     	ev.preventDefault();
     	var data = ev.dataTransfer.getData("text");
-    	changeTime(ev);
+    	if( checkValidMoveSpot(ev.target.id, ev.dataTransfer.getData("text"))){
+        document.getElementById(data).style.top = ev.target.style.top;
+        console.log("Data of drop " + data);
+        document.getElementById(data+"Marker").style.display = "none";
+        changeTime(ev);
+      } else {
+        console.log("not a valid time " + checkValidMoveSpot(ev.target.id, ev.dataTransfer.getData("text")));
+        $("#errorPopup").show();
+      }
+      
+
     	//console.log({{events}});
     	//data.events[]
-    	document.getElementById(data).style.top = ev.target.style.top;
-      console.log("Data of drop " + data);
-      document.getElementById(data+"Marker").style.display = "none";
+    	
     	//ev.target.appendChild(document.getElementById(data));
 	}
 	</script>
@@ -153,6 +161,7 @@ ga('send', 'pageview');
 
 
 <!--<body>-->
+
 	<div class="loginPrompt">
 		<h3>
 			What good is a calendar you keep losing?
@@ -163,10 +172,12 @@ ga('send', 'pageview');
     
   	</button>
 	</div>
+
+
 	<div id="reschedulePopup" class="reschedulePrompt">
-		<h3 class="reminder"> 
-			Reminder
-		</h3>
+		  <h3 id="rescheduleTitle" class="reminder"> 
+			 Reminder
+		  </h3>
 		<button id="rescheduleBeginButton" type="button" class="btn btn-default btn-sm btn-back btn-re">
       	<h2>
       		Start
@@ -182,6 +193,16 @@ ga('send', 'pageview');
     </h2>       
   		</button>
 	</div>
+
+  <div id="errorPopup" class="errorPrompt">
+      <h3 id="errorTitle" class="reminder"> 
+       Oops! It seems that you can't plan your task there!
+      </h3>
+    <button id="errorCloseButton" type="button" class="btn btn-default btn-sm btn-back btn-re">
+        <h2>
+          Close
+    </h2>
+  </div>
 
 
 	<div class="container addPrompt">

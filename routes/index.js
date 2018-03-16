@@ -12,6 +12,10 @@ exports.view = function(req, res){
   	res.render('index', data);
   	
 };
+exports.getData = function(req, res) {
+	console.log("getData");
+	res.send(data);
+}
 
 exports.indexB = function(req, res){
 	//console.log(res);
@@ -70,12 +74,19 @@ function addTask(req) {
 	var timeToEnd = timeToStart + parseFloat(req.body.duration);
 
 	var top = hourHeight + initialHeightBuffer * timeToStart;
+
+	var timeTop = hourHeight + initialHeightBuffer * timeStartConv;
+	var timeDuration = initialHeightBuffer * (timeEndConv - timeStartConv);
+
 	console.log(top);
 	data.events.push({
 		"title":req.body.title,
+		"timeTitle":req.body.title+"Marker",
 		"description":req.body.description,
 		"timeStart":timeStartConv,
 		"timeEnd":timeEndConv,
+		"timeTop": timeTop+"px",
+		"timeDuration": timeDuration+"px",
 		"duration":req.body.duration,
 		"class":classType,
 		"height":height+"px",
@@ -187,10 +198,10 @@ function checkTime(pos, start, end) {
 			} else if((start <= data.events[event].start)&&(end >= data.events[event].end)) {
 				console.log("Time block encompasses data " + data.events[event].start + " - " + data.events[event].end);
 				valid = false;
-			} else if((start <= data.events[event].start)&&(end >= data.events[event].start)) {
+			} else if((start < data.events[event].start)&&(end > data.events[event].start)) {
 				console.log("End overlaps " + data.events[event].start + " - " + data.events[event].end);
 				valid = false;
-			} else if((start <= data.events[event].end)&&(end >= data.events[event].end)) {
+			} else if((start < data.events[event].end)&&(end > data.events[event].end)) {
 				console.log("Start overlaps " + data.events[event].start + " - " + data.events[event].end);
 				valid = false;
 			}

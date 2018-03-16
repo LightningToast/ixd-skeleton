@@ -56,7 +56,7 @@ touch-action: unset;
 	right:8%;
 	width: 84%;
 	margin-left: auto;
-    background-color: #8FC0A9;
+    background-color: #c9e8d9;
     text-align: center;
     padding: 2px;
     border: 2px solid #0e9355;
@@ -130,21 +130,35 @@ touch-action: unset;
 	z-index: 11;
     width: 90%;
     height: 30%;
-	background-color: #efc35d;
-	border: 2px solid #e29f31;
+	background-color: #f9f1c5;
+	border: 2px solid #f2d42e;
 }
 .reschedulePrompt {
 	text-align: center;
 	position: fixed;
-	right: 10%;
+	right: 8%;
 	top: 35%;
 	z-index: 11;
-    width: 80%;
+    width: 84%;
     height: 30%;
-	background-color: #efc35d;
-	border: 2px solid #e29f31;
+	background-color: #f9f1c5;
+	border: 2px solid #f2d42e;
 	font-size: 12px;
-	border-radius: 20px;
+	border-radius: 5px;
+	font-family: Montserrat, Georgia, Burford, Arial, Helvetica, sans-serif;
+}
+.errorPrompt {
+	text-align: center;
+	position: fixed;
+	right: 8%;
+	top: 35%;
+	z-index: 11;
+    width: 84%;
+    height: 30%;
+	background-color: #f9f1c5;
+	border: 2px solid #f2d42e;
+	font-size: 12px;
+	border-radius: 5px;
 	font-family: Montserrat, Georgia, Burford, Arial, Helvetica, sans-serif;
 }
 
